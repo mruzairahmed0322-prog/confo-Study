@@ -1,0 +1,1 @@
+function s(r){return Array.isArray(r)?r:r&&typeof r=="object"&&Array.isArray(r.data)?r.data:[]}function o(r){if(!r||typeof r!="object")return!1;const t=r.sections;return!!t&&Object.values(t).some(Boolean)}export{s as a,o as h};

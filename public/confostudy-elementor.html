@@ -1,0 +1,2516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ConfoStudy (Concept Focus Study) — Learn Today. Lead Tomorrow. Quality online coaching for Primary, Matric, Intermediate, MDCAT, ECAT, English, and Computer courses across the world.">
+<meta name="keywords" content="ConfoStudy, online coaching worldwide, Matric, Intermediate, F.Sc, ICS, MDCAT, ECAT, Federal Board, Cambridge, IGCSE">
+<meta name="author" content="ConfoStudy">
+<title>ConfoStudy | Learn Today. Lead Tomorrow.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com" crossorigin>
+<link rel="dns-prefetch" href="https://springgreen-bee-995021.hostingersite.com">
+<link rel="dns-prefetch" href="https://confostudy.com">
+<link rel="preconnect" href="https://confostudy.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700;800&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"></noscript>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--primary:#12372A;
+--secondary:#2F855A;
+--accent:#D4A72C;
+--gold:#E6B84A;
+--bg:#EEF4EF;
+--white:#FFFFFF;
+--text:#244135;
+--muted:#668075;
+--border:rgba(18,55,42,.12);
+--shadow:0 8px 28px rgba(18,55,42,.1);
+--shadow-lg:0 20px 48px rgba(18,55,42,.16);
+--radius:20px;
+--radius-sm:14px;
+--nav-h:84px;
+--grad:linear-gradient(135deg,#2F855A 0%,#70B77E 58%,#D4A72C 130%);
+--grad-gold:linear-gradient(135deg,#D4A72C 0%,#F2CF72 100%);
+--sec-bg:transparent;
+--sec-card:#FFFFFF;
+--sec-card-border:rgba(18,55,42,.1);
+--sec-soft:rgba(47,133,90,.06);
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px)}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{
+font-family:'Inter',system-ui,sans-serif;
+font-size:16px;
+line-height:1.65;
+color:var(--text);
+background:#E8F0EA;
+-webkit-font-smoothing:antialiased;
+overflow-x:hidden;
+text-rendering:optimizeLegibility;
+}
+h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif;color:var(--primary);line-height:1.2;font-weight:700}
+img,svg{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.cs-wrap{width:min(1180px,calc(100% - 2rem));margin-inline:auto}
+.cs-section{
+padding:4.75rem 0;position:relative;overflow:clip;
+background:var(--sec-bg);
+}
+.cs-section > *{position:relative;z-index:1}
+
+/* Light / Dark alternating themes */
+.cs-section--light{
+--primary:#12372A;
+--text:#244135;
+--muted:#5F7A6C;
+--border:rgba(18,55,42,.12);
+--sec-bg:
+radial-gradient(ellipse 70% 55% at 100% 0%,rgba(212,167,44,.1),transparent 55%),
+linear-gradient(180deg,#F3F8F3 0%,#E8F1E9 100%);
+--sec-card:#FFFFFF;
+--sec-card-border:rgba(18,55,42,.1);
+--sec-soft:rgba(47,133,90,.07);
+}
+.cs-section--light::before{
+content:'';position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.4;
+background-image:radial-gradient(circle at 1px 1px,rgba(47,133,90,.1) 1px,transparent 0);
+background-size:24px 24px;
+}
+.cs-section--dark{
+--primary:#F2F8F4;
+--text:#E4EEE8;
+--muted:#A7BDB0;
+--border:rgba(255,255,255,.12);
+--sec-bg:
+radial-gradient(ellipse 80% 60% at 0% 0%,rgba(112,183,126,.18),transparent 50%),
+radial-gradient(ellipse 70% 50% at 100% 100%,rgba(212,167,44,.12),transparent 55%),
+linear-gradient(165deg,#0A291D 0%,#12372A 48%,#0F2F24 100%);
+--sec-card:rgba(255,255,255,.06);
+--sec-card-border:rgba(255,255,255,.12);
+--sec-soft:rgba(255,255,255,.06);
+color:var(--text);
+}
+.cs-section--dark .cs-title,
+.cs-section--dark h2,
+.cs-section--dark h3,
+.cs-section--dark h4{color:var(--primary)}
+.cs-section--dark .cs-eyebrow{color:#8FD4A8}
+.cs-section--dark .cs-lead,
+.cs-section--dark p{color:var(--muted)}
+.cs-section--dark .cs-faq details,
+.cs-section--dark .cs-form,
+.cs-section--dark .cs-card,
+.cs-section--dark .cs-board,
+.cs-section--dark .cs-doc,
+.cs-section--dark .cs-pill,
+.cs-section--dark .cs-price,
+.cs-section--dark .cs-about-service,
+.cs-section--dark .cs-contact-item{
+background:
+linear-gradient(180deg,rgba(255,255,255,.08) 0%,rgba(255,255,255,.03) 100%);
+border-color:var(--sec-card-border);
+box-shadow:0 12px 40px rgba(0,0,0,.22);
+color:var(--text);
+}
+.cs-section--dark .cs-card::after,
+.cs-section--dark .cs-board::after,
+.cs-section--dark .cs-doc::after,
+.cs-section--dark .cs-pill::after,
+.cs-section--dark .cs-price::after,
+.cs-section--dark .cs-faq details::after,
+.cs-section--dark .cs-contact-item::after{
+background:linear-gradient(0deg,rgba(212,167,44,.16),transparent);
+}
+.cs-section--dark .cs-card p,
+.cs-section--dark .cs-board p,
+.cs-section--dark .cs-doc p,
+.cs-section--dark .cs-pill p,
+.cs-section--dark .cs-faq .cs-faq__a{color:var(--muted)}
+.cs-section--dark .cs-btn--outline{
+color:#B7E4C7;border-color:rgba(183,228,199,.35);
+}
+.cs-section--dark .cs-btn--outline:hover{background:rgba(255,255,255,.08)}
+.cs-section--dark .cs-btn--ghost{
+background:rgba(255,255,255,.08);color:#F2F8F4;border-color:rgba(255,255,255,.18);
+}
+.cs-section--dark .cs-step__card,
+.cs-section--dark .cs-price-note{
+background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:var(--muted);
+}
+.cs-section--dark .cs-form input,
+.cs-section--dark .cs-form select,
+.cs-section--dark .cs-form textarea{
+background:rgba(8,30,22,.45);border-color:rgba(255,255,255,.14);color:#F2F8F4;
+}
+.cs-section--dark .cs-form label{color:#C5D9CC}
+.cs-section--dark .cs-about-values span{
+background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);color:#D7E8DC;
+}
+.cs-eyebrow{
+display:inline-flex;align-items:center;gap:.5rem;
+font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+color:var(--secondary);margin-bottom:1rem;
+}
+.cs-eyebrow::before{
+content:'';width:28px;height:2px;background:var(--grad);border-radius:2px;
+}
+.cs-title{font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:.75rem}
+.cs-lead{color:var(--muted);max-width:540px;font-size:1.05rem}
+.cs-center{text-align:center}
+.cs-center .cs-lead{margin-inline:auto}
+.cs-center .cs-eyebrow{justify-content:center}
+.cs-center .cs-eyebrow::before{display:none}
+
+/* Buttons */
+.cs-btn{
+display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+padding:.875rem 1.5rem;border-radius:999px;font-family:'Poppins',sans-serif;
+font-size:.9rem;font-weight:600;border:none;cursor:pointer;
+transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+}
+.cs-btn:hover{transform:translateY(-2px)}
+.cs-btn--primary{
+background:var(--grad);color:#fff;
+box-shadow:0 10px 30px rgba(47,133,90,.3);
+}
+.cs-btn--primary:hover{box-shadow:0 14px 36px rgba(47,133,90,.4)}
+.cs-btn--ghost{
+background:rgba(255,255,255,.7);color:var(--primary);
+border:1px solid rgba(15,23,42,.1);backdrop-filter:blur(12px);
+}
+.cs-btn--ghost:hover{background:#fff;box-shadow:var(--shadow)}
+.cs-btn--nav{
+background:var(--grad);color:#fff;padding:.65rem 1.25rem;font-size:.85rem;
+box-shadow:0 8px 20px rgba(47,133,90,.28);
+}
+.cs-btn--sm{padding:.65rem 1.15rem;font-size:.8rem}
+.cs-btn--outline{
+background:transparent;color:var(--secondary);
+border:1.5px solid rgba(47,133,90,.35);
+}
+.cs-btn--outline:hover{background:rgba(47,133,90,.07)}
+
+/* Nav — floating 3D modern bar */
+.cs-nav{
+position:sticky;top:0;z-index:1000;
+padding:.65rem 0 .35rem;
+background:transparent;
+border:none;box-shadow:none;
+}
+.cs-nav .cs-wrap{width:min(1360px,calc(100% - 1.25rem))}
+.cs-nav__inner{
+min-height:calc(var(--nav-h) - 8px);
+display:flex;align-items:center;justify-content:space-between;gap:.85rem;
+position:relative;
+padding:.55rem .7rem .55rem .85rem;
+border-radius:22px;
+background:
+linear-gradient(155deg,rgba(255,255,255,.97) 0%,rgba(245,250,244,.94) 48%,rgba(236,245,237,.96) 100%);
+border:1px solid rgba(255,255,255,.85);
+box-shadow:
+0 1px 0 rgba(255,255,255,.95) inset,
+0 -1px 0 rgba(18,55,42,.04) inset,
+0 10px 28px rgba(18,55,42,.1),
+0 2px 6px rgba(18,55,42,.06),
+0 0 0 1px rgba(18,55,42,.06);
+backdrop-filter:blur(18px) saturate(1.35);
+-webkit-backdrop-filter:blur(18px) saturate(1.35);
+}
+.cs-nav__inner::before{
+content:'';position:absolute;inset:1px;border-radius:21px;pointer-events:none;
+background:linear-gradient(180deg,rgba(255,255,255,.55),transparent 42%);
+opacity:.9;
+}
+.cs-nav__inner > *{position:relative;z-index:1}
+.cs-nav__left{display:flex;align-items:center;gap:1.35rem;min-width:0;flex:1}
+.cs-nav__apply{
+flex-shrink:0;
+display:inline-flex;align-items:center;gap:.4rem;
+padding:.62rem 1.1rem;border-radius:999px;
+font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:700;white-space:nowrap;
+color:#fff;
+background:
+linear-gradient(180deg,rgba(255,255,255,.28),transparent 45%),
+linear-gradient(135deg,#E0B33A 0%,#D4A72C 45%,#C4921A 100%);
+border:1px solid rgba(255,255,255,.35);
+box-shadow:
+0 1px 0 rgba(255,255,255,.45) inset,
+0 8px 18px rgba(212,167,44,.38),
+0 2px 0 rgba(160,110,20,.35);
+transition:transform .25s,box-shadow .25s,filter .25s;
+}
+.cs-nav__apply:hover{
+transform:translateY(-2px);
+filter:brightness(1.04);
+box-shadow:
+0 1px 0 rgba(255,255,255,.5) inset,
+0 14px 28px rgba(212,167,44,.48),
+0 3px 0 rgba(160,110,20,.4);
+}
+.cs-nav__apply:active{transform:translateY(0)}
+.cs-nav__apply svg{width:15px;height:15px;flex-shrink:0}
+.cs-logo{
+font-family:'Poppins',sans-serif;font-weight:800;font-size:1.4rem;
+color:var(--primary);letter-spacing:-.02em;display:flex;align-items:center;gap:.4rem;
+flex-shrink:0;
+}
+.cs-logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cs-nav__links{
+display:none;align-items:center;gap:.2rem;margin-left:0;
+padding:.28rem;
+border-radius:999px;
+background:rgba(18,55,42,.045);
+box-shadow:inset 0 1px 2px rgba(18,55,42,.06);
+}
+.cs-nav__links > a,
+.cs-drop__btn{
+padding:.55rem .82rem;font-size:.88rem;font-weight:650;color:var(--muted);
+border-radius:999px;transition:color .2s,background .2s,box-shadow .2s,transform .2s;
+border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;
+display:inline-flex;align-items:center;gap:.48rem;
+}
+.cs-nav__links > a svg,
+.cs-drop__btn > svg:first-child{width:17px;height:17px;flex-shrink:0;color:var(--secondary)}
+.cs-nav__links > a:hover,
+.cs-drop__btn:hover{
+color:var(--primary);
+background:linear-gradient(180deg,#fff,rgba(242,248,239,.95));
+box-shadow:0 4px 12px rgba(18,55,42,.1),0 1px 0 #fff inset;
+transform:translateY(-1px);
+}
+.cs-nav__links > a:hover svg{color:var(--primary)}
+.cs-drop{position:relative;padding:10px 0;margin:-10px 0}
+.cs-drop__btn{display:inline-flex;align-items:center;gap:.35rem}
+.cs-drop__btn .cs-chevron{width:14px;height:14px;transition:transform .25s;color:currentColor}
+.cs-drop:hover .cs-drop__btn,
+.cs-drop:focus-within .cs-drop__btn{
+color:var(--primary);
+background:linear-gradient(180deg,#fff,rgba(242,248,239,.95));
+box-shadow:0 4px 12px rgba(18,55,42,.1),0 1px 0 #fff inset;
+}
+.cs-drop:hover .cs-drop__btn .cs-chevron,
+.cs-drop:focus-within .cs-drop__btn .cs-chevron{transform:rotate(180deg)}
+.cs-drop__menu{
+position:absolute;top:calc(100% - 2px);left:0;transform:translateY(8px);
+min-width:230px;padding:.55rem;
+background:linear-gradient(165deg,rgba(255,255,255,.98),rgba(243,248,243,.96));
+backdrop-filter:blur(20px) saturate(1.5);
+-webkit-backdrop-filter:blur(20px) saturate(1.5);
+border:1px solid rgba(255,255,255,.9);
+border-radius:18px;
+box-shadow:
+0 1px 0 rgba(255,255,255,.9) inset,
+0 22px 50px rgba(8,35,25,.18);
+opacity:0;visibility:hidden;pointer-events:none;
+transition:opacity .25s,transform .25s,visibility .25s;
+z-index:25;
+}
+.cs-drop__menu::before{
+content:'';position:absolute;top:-16px;left:0;right:0;height:18px;background:transparent;
+}
+.cs-drop:hover .cs-drop__menu,
+.cs-drop:focus-within .cs-drop__menu{
+opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);
+}
+.cs-drop__menu a{
+display:flex;align-items:center;gap:.65rem;
+padding:.75rem .9rem;border-radius:12px;font-size:.84rem;font-weight:550;
+color:var(--text);transition:background .2s,color .2s,transform .2s;
+}
+.cs-drop__menu a:hover{
+background:linear-gradient(135deg,rgba(47,133,90,.1),rgba(212,167,44,.1));
+color:var(--primary);transform:translateX(3px);
+}
+.cs-drop__menu a svg{width:16px;height:16px;color:var(--secondary);flex-shrink:0}
+.cs-nav__toggle{
+display:flex;flex-direction:column;gap:5px;width:44px;height:44px;
+align-items:center;justify-content:center;
+background:linear-gradient(145deg,#fff,#eef6ef);
+border:1px solid rgba(47,133,90,.14);border-radius:14px;cursor:pointer;
+box-shadow:0 1px 0 #fff inset,0 8px 18px rgba(18,55,42,.1);
+}
+.cs-nav__toggle span{display:block;width:18px;height:2px;background:var(--primary);border-radius:2px;transition:.25s}
+.cs-nav__check{position:absolute;opacity:0;pointer-events:none}
+.cs-nav__check:checked ~ .cs-nav__toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.cs-nav__check:checked ~ .cs-nav__toggle span:nth-child(2){opacity:0}
+.cs-nav__check:checked ~ .cs-nav__toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.cs-nav__drawer{
+display:none;position:absolute;top:calc(100% + 12px);left:0;right:0;
+background:#fff;
+border:1px solid rgba(18,55,42,.1);border-radius:22px;
+padding:.85rem;flex-direction:column;gap:.2rem;
+box-shadow:0 1px 0 #fff inset,0 28px 70px rgba(8,35,25,.2);
+max-height:min(78vh,640px);overflow:auto;
+-webkit-overflow-scrolling:touch;
+}
+.cs-nav__drawer a{
+display:flex;align-items:center;gap:.7rem;
+padding:.9rem 1rem;border-radius:14px;font-weight:600;color:var(--text);
+}
+.cs-nav__drawer a svg{width:18px;height:18px;color:var(--secondary);flex-shrink:0}
+.cs-nav__drawer a:hover{background:rgba(47,133,90,.08);color:var(--secondary)}
+.cs-nav__drawer .cs-drawer-label{
+font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+color:var(--muted);padding:.85rem 1rem .3rem;
+}
+.cs-nav__drawer .cs-btn-row{display:block;margin-top:.7rem}
+.cs-nav__drawer .cs-apply-btn{justify-content:center;width:100%}
+.cs-nav__check:checked ~ .cs-nav__drawer{display:flex}
+.cs-nav__cta{
+display:none;margin-left:auto;flex-shrink:0;
+}
+.cs-nav__mobile-apply{display:none}
+.cs-nav__apply-label{display:inline}
+.cs-apply-btn{
+display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
+padding:.75rem 1.1rem;border-radius:999px;width:100%;
+font-family:'Poppins',sans-serif;font-size:.85rem;font-weight:650;white-space:nowrap;
+color:#fff;
+background:linear-gradient(180deg,rgba(255,255,255,.28),transparent 45%),linear-gradient(135deg,#E0B33A,#D4A72C);
+border:1px solid rgba(255,255,255,.35);
+box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 8px 18px rgba(212,167,44,.35);
+transition:transform .25s,box-shadow .25s;
+}
+.cs-apply-btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(212,167,44,.42)}
+.cs-apply-btn svg{width:16px;height:16px;flex-shrink:0}
+@media(min-width:1024px){
+.cs-nav__toggle,.cs-nav__drawer,.cs-nav__mobile-apply{display:none!important}
+.cs-nav__links{display:flex}
+.cs-nav__cta{display:inline-flex}
+.cs-nav__inner{gap:.55rem}
+}
+@media(min-width:1024px) and (max-width:1200px){
+.cs-nav__links > a,.cs-drop__btn{padding:.5rem .62rem;font-size:.8rem}
+.cs-logo{font-size:1.2rem}
+.cs-nav__left{gap:1rem}
+.cs-nav__apply{padding:.5rem .85rem;font-size:.7rem}
+.cs-nav__links > a span{display:inline}
+.cs-drop__btn span{display:inline}
+}
+@media(max-width:1180px){
+.cs-hero__grid{gap:2rem}
+.cs-hero__stats{gap:1rem}
+}
+@media(max-width:1023px){
+.cs-nav .cs-wrap{width:min(1360px,calc(100% - .85rem))}
+.cs-nav__inner{
+display:grid;
+grid-template-columns:minmax(0,1fr) auto auto;
+align-items:center;
+column-gap:.4rem;
+padding:.45rem .5rem .45rem .65rem;
+}
+.cs-nav__left{grid-column:1;grid-row:1;flex:unset;min-width:0;gap:0;overflow:hidden}
+.cs-logo{font-size:clamp(1.05rem,4.6vw,1.3rem);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cs-nav__cta{display:none!important}
+.cs-nav__check{grid-column:1;grid-row:1;width:1px;height:1px;overflow:hidden}
+.cs-nav__mobile-apply{
+grid-column:2;grid-row:1;
+display:inline-flex;
+margin-left:0;
+padding:.48rem .78rem;
+font-size:.7rem;
+gap:.32rem;
+justify-self:end;
+align-self:center;
+}
+.cs-nav__toggle{
+grid-column:3;grid-row:1;
+margin-left:0;
+width:42px;height:42px;
+justify-self:end;
+}
+.cs-nav__drawer{grid-column:1/-1;grid-row:2}
+.cs-hero{padding:2.6rem 0 3.2rem}
+.cs-hero__visual{min-height:300px;margin-top:.5rem}
+.cs-glass--main{transform:none;animation:cs-rise .8s ease both}
+.cs-glass--main:hover{transform:translateY(-4px)}
+.cs-illus{clip-path:none;border-radius:22px}
+.cs-hero-shape--3{display:none}
+.cs-nav__drawer a{font-size:.95rem}
+}
+@media(max-width:400px){
+.cs-nav__mobile-apply{
+padding:.52rem;
+min-width:42px;min-height:42px;
+justify-content:center;
+border-radius:14px;
+}
+.cs-nav__mobile-apply .cs-nav__apply-label{display:none}
+.cs-nav__mobile-apply svg{width:17px;height:17px}
+.cs-nav__toggle{width:40px;height:40px;border-radius:12px}
+}
+@media(max-width:900px){
+.cs-campus-gallery{grid-template-columns:1fr;grid-template-rows:auto}
+.cs-campus-gallery figure,
+.cs-campus-gallery figure:first-child{grid-column:auto;grid-row:auto;min-height:220px}
+.cs-team-card{min-height:400px;flex-basis:min(88vw,300px)}
+}
+
+/* Hero */
+.cs-hero{
+position:relative;min-height:calc(100svh - var(--nav-h));
+display:flex;align-items:center;padding:3.5rem 0 4rem;overflow:hidden;
+background:
+radial-gradient(ellipse 70% 55% at 78% 12%,rgba(112,183,126,.28),transparent 55%),
+radial-gradient(ellipse 60% 55% at 8% 85%,rgba(212,167,44,.22),transparent 55%),
+linear-gradient(160deg,#07231A 0%,#0C3325 45%,#123D2C 78%,#1B4A34 100%);
+}
+.cs-hero::after{
+content:'';position:absolute;inset:0;pointer-events:none;
+background:
+linear-gradient(115deg,transparent 40%,rgba(212,167,44,.06) 50%,transparent 60%),
+repeating-linear-gradient(60deg,rgba(255,255,255,.015) 0 2px,transparent 2px 60px);
+mix-blend-mode:screen;
+}
+.cs-hero__bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.cs-orb{
+position:absolute;border-radius:50%;filter:blur(40px);opacity:.55;
+animation:cs-float 8s ease-in-out infinite;
+}
+.cs-orb--1{width:300px;height:300px;background:rgba(112,183,126,.45);top:-60px;right:8%;animation-delay:0s}
+.cs-orb--2{width:220px;height:220px;background:rgba(212,167,44,.4);bottom:8%;left:4%;animation-delay:-2s}
+.cs-orb--3{width:150px;height:150px;background:rgba(242,207,114,.35);top:38%;right:24%;animation-delay:-4s}
+.cs-shape{
+position:absolute;border:1.5px solid rgba(255,255,255,.16);border-radius:24px;
+animation:cs-float 10s ease-in-out infinite reverse;
+}
+.cs-shape--1{width:80px;height:80px;top:18%;left:8%;transform:rotate(18deg)}
+.cs-shape--2{width:56px;height:56px;bottom:22%;right:12%;border-radius:50%;border-color:rgba(242,207,114,.4);animation-delay:-3s}
+.cs-shape--3{width:40px;height:40px;top:55%;left:18%;background:rgba(242,207,114,.18);border:none;animation-delay:-1s}
+@keyframes cs-float{
+0%,100%{transform:translateY(0) rotate(0deg)}
+50%{transform:translateY(-18px) rotate(4deg)}
+}
+.cs-hero__grid{
+display:grid;gap:2.5rem;align-items:center;position:relative;z-index:2;
+}
+@media(min-width:900px){
+.cs-hero__grid{grid-template-columns:1.05fr .95fr;gap:3rem}
+}
+.cs-hero__badge{
+display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;
+padding:.5rem .95rem;border-radius:999px;font-size:.76rem;font-weight:600;letter-spacing:.02em;
+color:#EAF7EC;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+backdrop-filter:blur(10px);animation:cs-rise .7s .05s both;
+}
+.cs-hero__badge .cs-chip__dot{background:#F2CF72;box-shadow:0 0 0 4px rgba(242,207,114,.25)}
+.cs-hero__brand{
+font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(1rem,2.5vw,1.2rem);
+letter-spacing:.01em;margin-bottom:.9rem;color:rgba(234,247,236,.85);animation:cs-rise .7s .1s both;
+}
+.cs-hero__brand em{
+font-style:normal;background:linear-gradient(135deg,#8FE0A0,#F2CF72);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.cs-hero h1{
+font-size:clamp(2.6rem,7vw,4.5rem);font-weight:800;letter-spacing:-.03em;
+margin-bottom:1.25rem;line-height:1.03;color:#fff;animation:cs-rise .8s .18s both;
+text-shadow:0 12px 40px rgba(0,0,0,.35);
+}
+.cs-hero h1 .line2{
+display:block;background:linear-gradient(120deg,#9BE7AC 0%,#F2CF72 100%);
+-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.cs-hero__desc{
+font-size:1.1rem;color:rgba(234,247,236,.78);max-width:460px;margin-bottom:2rem;
+animation:cs-rise .8s .28s both;
+}
+.cs-hero__ctas{animation:cs-rise .8s .38s both}
+.cs-hero .cs-btn--ghost{
+background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.25);
+}
+.cs-hero .cs-btn--ghost:hover{background:rgba(255,255,255,.2)}
+.cs-hero__stats{
+display:flex;flex-wrap:wrap;gap:1.75rem;margin-top:2.25rem;animation:cs-rise .8s .48s both;
+}
+.cs-hero__stat strong{
+display:block;font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:800;
+background:linear-gradient(120deg,#9BE7AC,#F2CF72);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.cs-hero__stat span{font-size:.78rem;color:rgba(234,247,236,.7)}
+.cs-hero__ctas{display:flex;flex-wrap:wrap;gap:.85rem}
+.cs-hero__visual{position:relative;min-height:400px;perspective:1200px}
+.cs-glass{
+background:rgba(255,255,255,.12);backdrop-filter:blur(18px) saturate(1.3);
+border:1px solid rgba(255,255,255,.22);border-radius:28px;
+box-shadow:0 30px 80px rgba(0,0,0,.28);padding:1rem;
+}
+.cs-glass--main{
+padding:.7rem;animation:cs-hero-in 1s .15s both;
+transform:rotateY(-7deg) rotateX(4deg);
+transition:transform .55s cubic-bezier(.2,.8,.2,1);
+position:relative;z-index:2;
+}
+.cs-glass--main:hover{transform:rotateY(-2deg) rotateX(1deg) translateY(-8px)}
+.cs-glass--float{
+position:absolute;padding:1rem 1.15rem;animation:cs-float 7s ease-in-out infinite;
+background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+backdrop-filter:blur(14px);
+}
+.cs-glass--a{top:4%;right:-2%;max-width:190px;animation-delay:-1s;z-index:3}
+.cs-glass--b{bottom:6%;left:-4%;max-width:210px;animation-delay:-3.5s;z-index:3}
+.cs-glass--c{
+top:46%;right:-8%;max-width:150px;animation-delay:-2s;z-index:3;
+display:none;
+}
+@media(min-width:900px){.cs-glass--c{display:block}}
+@keyframes cs-rise{
+from{opacity:0;transform:translateY(24px)}
+to{opacity:1;transform:translateY(0)}
+}
+@keyframes cs-hero-in{
+from{opacity:0;transform:rotateY(-14deg) rotateX(8deg) translateY(28px) scale(.96)}
+to{opacity:1;transform:rotateY(-7deg) rotateX(4deg) translateY(0) scale(1)}
+}
+@keyframes cs-spin-slow{
+from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}
+@keyframes cs-ken{
+0%,100%{transform:scale(1.02) translate(0,0)}
+50%{transform:scale(1.1) translate(-1.5%,-1%)}
+}
+.cs-illus{
+width:100%;aspect-ratio:4/3;border-radius:24px;
+display:grid;place-items:center;overflow:hidden;position:relative;
+background:linear-gradient(145deg,#0f3a2b,#1a563f);
+clip-path:polygon(4% 0,100% 0,100% 92%,96% 100%,0 100%,0 8%);
+}
+.cs-illus::before{
+content:'';position:absolute;inset:auto -10% -20% auto;width:180px;height:180px;border-radius:50%;
+background:radial-gradient(circle,rgba(242,207,114,.35),transparent 70%);
+z-index:1;pointer-events:none;
+}
+.cs-illus::after{
+content:'';position:absolute;inset:0;
+background:linear-gradient(180deg,transparent 35%,rgba(7,35,26,.5));
+pointer-events:none;z-index:1;
+}
+.cs-illus img{
+width:100%;height:100%;object-fit:cover;
+animation:cs-ken 14s ease-in-out infinite;
+}
+.cs-glass--main:hover .cs-illus img{animation-play-state:paused;transform:scale(1.08)}
+.cs-hero-shape{
+position:absolute;z-index:0;pointer-events:none;
+}
+.cs-hero-shape--1{
+width:92%;height:92%;top:6%;left:8%;
+border-radius:32px;
+background:linear-gradient(145deg,rgba(112,183,126,.22),rgba(212,167,44,.12));
+border:1px solid rgba(255,255,255,.12);
+transform:rotate(9deg);
+animation:cs-float 9s ease-in-out infinite;
+}
+.cs-hero-shape--2{
+width:78%;height:78%;bottom:-6%;right:4%;
+border-radius:50%;
+border:1.5px dashed rgba(242,207,114,.35);
+background:rgba(242,207,114,.05);
+animation:cs-spin-slow 28s linear infinite;
+}
+.cs-hero-shape--3{
+width:120px;height:120px;top:12%;left:-4%;
+border-radius:28px;
+background:linear-gradient(135deg,rgba(47,133,90,.35),rgba(212,167,44,.2));
+border:1px solid rgba(255,255,255,.16);
+transform:rotate(-14deg);
+animation:cs-float 6.5s ease-in-out infinite reverse;
+}
+.cs-chip{
+display:inline-flex;align-items:center;gap:.45rem;
+font-size:.78rem;font-weight:600;color:#EAF7EC;
+}
+.cs-chip__dot{
+width:8px;height:8px;border-radius:50%;background:var(--accent);
+box-shadow:0 0 0 4px rgba(47,133,90,.2);animation:cs-pulse 2s ease infinite;
+}
+@keyframes cs-pulse{
+0%,100%{box-shadow:0 0 0 4px rgba(47,133,90,.2)}
+50%{box-shadow:0 0 0 7px rgba(47,133,90,.08)}
+}
+.cs-stat-mini{font-size:.75rem;color:rgba(234,247,236,.72);margin-top:.35rem}
+.cs-stat-mini strong{display:block;font-size:1.15rem;color:#fff;font-family:'Poppins',sans-serif}
+
+/* Stats */
+.cs-stats{margin-top:-2.5rem;position:relative;z-index:5;padding-bottom:0}
+.cs-stats__grid{
+display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;
+background:var(--white);border-radius:var(--radius);padding:1.5rem;
+box-shadow:var(--shadow-lg);border:1px solid var(--border);
+}
+@media(min-width:768px){
+.cs-stats__grid{grid-template-columns:repeat(4,1fr);padding:2rem;gap:0}
+.cs-stat:not(:last-child){border-right:1px solid var(--border)}
+}
+.cs-stat{text-align:center;padding:1rem}
+.cs-stat__num{
+font-family:'Poppins',sans-serif;font-size:clamp(1.75rem,3vw,2.25rem);font-weight:800;
+background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.cs-stat__label{font-size:.85rem;color:var(--muted);font-weight:500;margin-top:.25rem}
+
+/* Cards grid */
+.cs-grid{display:grid;gap:1.25rem}
+.cs-grid--2{grid-template-columns:1fr}
+.cs-grid--3{grid-template-columns:1fr}
+.cs-grid--4{grid-template-columns:1fr}
+@media(min-width:640px){
+.cs-grid--2{grid-template-columns:repeat(2,1fr)}
+.cs-grid--4{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:900px){
+.cs-grid--3{grid-template-columns:repeat(3,1fr)}
+.cs-grid--4{grid-template-columns:repeat(4,1fr)}
+.cs-grid--courses{grid-template-columns:repeat(3,1fr)}
+}
+.cs-card{
+background:
+linear-gradient(180deg,rgba(255,255,255,0) 42%,var(--sec-soft) 100%),
+var(--sec-card);
+border:1px solid var(--sec-card-border);border-radius:var(--radius);
+padding:1.75rem;box-shadow:var(--shadow);position:relative;overflow:hidden;
+transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+contain:layout paint;
+}
+.cs-card::after{
+content:'';position:absolute;left:0;right:0;bottom:0;height:78px;pointer-events:none;
+background:
+linear-gradient(0deg,rgba(212,167,44,.1),transparent 72%),
+radial-gradient(ellipse 70% 100% at 50% 120%,rgba(47,133,90,.12),transparent 70%);
+opacity:.9;
+}
+.cs-card:hover{
+transform:translateY(-6px);box-shadow:var(--shadow-lg);
+border-color:rgba(47,133,90,.22);
+}
+.cs-card:hover::after{opacity:1}
+.cs-card > *{position:relative;z-index:1}
+.cs-card__icon{
+width:48px;height:48px;border-radius:14px;display:grid;place-items:center;
+background:linear-gradient(135deg,rgba(47,133,90,.11),rgba(212,167,44,.11));
+margin-bottom:1.15rem;color:var(--secondary);
+}
+.cs-card__icon svg{width:24px;height:24px}
+.cs-card h3{font-size:1.1rem;margin-bottom:.5rem}
+.cs-card p{font-size:.92rem;color:var(--muted)}
+
+/* About */
+.cs-about__intro{max-width:680px;margin:0 auto 2.5rem;text-align:center;color:var(--muted);font-size:1.05rem}
+.cs-about-layout{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:900px){.cs-about-layout{grid-template-columns:.92fr 1.08fr;gap:4rem}}
+.cs-about-collage{
+position:relative;display:grid;grid-template-columns:1.05fr .95fr;grid-template-rows:215px 215px;
+gap:1.1rem;min-height:445px;
+}
+.cs-about-photo{
+position:relative;overflow:hidden;background:#edf6ee;
+box-shadow:0 20px 50px rgba(18,55,42,.16);
+isolation:isolate;
+}
+.cs-about-photo::after{
+content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+background:linear-gradient(180deg,transparent 62%,rgba(18,55,42,.18));
+}
+.cs-about-photo img{
+position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;
+transition:transform .7s cubic-bezier(.2,.8,.2,1);
+}
+.cs-about-photo:hover img{transform:scale(1.06)}
+.cs-about-photo--tall{
+grid-row:1/3;
+border-radius:999px 999px 30px 30px;
+border:1px solid rgba(255,255,255,.65);
+}
+.cs-about-photo--tall img{object-position:35% center}
+.cs-about-photo--round{
+border-radius:32px 32px 32px 110px;
+border:1px solid rgba(255,255,255,.65);
+}
+.cs-about-photo--soft{
+border-radius:110px 32px 32px 32px;
+border:1px solid rgba(255,255,255,.65);
+}
+.cs-about-badge{
+position:absolute;left:1rem;bottom:1rem;z-index:3;display:flex;align-items:center;gap:.75rem;
+padding:.8rem 1rem;border-radius:18px;background:linear-gradient(135deg,#2F855A,#D4A72C);
+color:#fff;box-shadow:0 16px 35px rgba(47,133,90,.28);
+}
+.cs-about-badge strong{display:block;font-family:'Poppins',sans-serif;font-size:1.05rem}
+.cs-about-badge span{font-size:.72rem;color:rgba(255,255,255,.8)}
+.cs-about-badge svg{width:30px;height:30px}
+.cs-about-copy .cs-title{font-size:clamp(2rem,4vw,3rem);max-width:650px}
+.cs-about-copy .cs-title span{color:var(--gold)}
+.cs-about-copy>p{color:var(--muted);margin-bottom:1.2rem}
+.cs-about-services{display:grid;gap:1rem;margin:1.5rem 0}
+@media(min-width:600px){.cs-about-services{grid-template-columns:1fr 1fr}}
+.cs-about-service{
+display:flex;gap:.9rem;padding:1rem;border-radius:18px;
+background:linear-gradient(145deg,#fff,#f4f9ef);border:1px solid var(--border);
+box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s;
+}
+.cs-about-service:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.cs-about-service__icon{
+width:46px;height:46px;flex:0 0 46px;border-radius:50%;display:grid;place-items:center;
+background:linear-gradient(135deg,#FFF1BD,#F2CF72);color:#6C5100;
+}
+.cs-about-service__icon svg{width:23px;height:23px}
+.cs-about-service h3{font-size:.95rem;margin-bottom:.3rem}
+.cs-about-service p{font-size:.82rem;color:var(--muted);line-height:1.55}
+.cs-about-values{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.cs-about-values span{
+padding:.45rem .75rem;border-radius:999px;background:rgba(47,133,90,.08);
+color:var(--primary);font-size:.76rem;font-weight:700;border:1px solid rgba(47,133,90,.12);
+}
+@media(max-width:599px){
+.cs-about-collage{grid-template-rows:230px 165px;min-height:0}
+.cs-about-photo--tall{grid-column:1/3;grid-row:auto;border-radius:36px 36px 120px 36px}
+.cs-about-photo--tall img{object-position:center 30%}
+.cs-about-photo--round,.cs-about-photo--soft{grid-row:2}
+.cs-about-photo--round{border-radius:28px 28px 28px 80px}
+.cs-about-photo--soft{border-radius:80px 28px 28px 28px}
+.cs-about-badge{left:.75rem;bottom:.75rem}
+}
+.cs-mvv .cs-card{height:100%}
+.cs-mvv .cs-card:nth-child(1) .cs-card__icon{background:rgba(47,133,90,.12);color:var(--secondary)}
+.cs-mvv .cs-card:nth-child(2) .cs-card__icon{background:rgba(212,167,44,.14);color:var(--accent)}
+.cs-mvv .cs-card:nth-child(3) .cs-card__icon{background:rgba(245,158,11,.12);color:var(--gold)}
+
+/* Features */
+.cs-feat .cs-card{padding:1.4rem}
+.cs-feat h3{font-size:1rem}
+
+/* Courses */
+.cs-course .cs-card{display:flex;flex-direction:column}
+.cs-course .cs-card p{flex:1;margin-bottom:1.25rem}
+.cs-course .cs-btn{align-self:flex-start}
+
+/* Boards */
+.cs-board{
+display:flex;align-items:flex-start;gap:1rem;padding:1.25rem 1.35rem;
+background:
+linear-gradient(180deg,rgba(255,255,255,0) 45%,rgba(47,133,90,.055) 100%),
+linear-gradient(180deg,#FFFFFF,#F7FBF4);
+border:1px solid var(--border);border-radius:var(--radius-sm);
+box-shadow:var(--shadow);position:relative;overflow:hidden;
+transition:transform .25s,box-shadow .25s;
+}
+.cs-board::after{
+content:'';position:absolute;inset:auto 0 0 0;height:56px;pointer-events:none;
+background:linear-gradient(0deg,rgba(212,167,44,.08),transparent);
+}
+.cs-board:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.cs-board__icon{
+width:44px;height:44px;flex-shrink:0;border-radius:12px;
+background:var(--grad);color:#fff;display:grid;place-items:center;
+margin-top:.1rem;
+}
+.cs-board__icon svg{width:22px;height:22px}
+.cs-board h3{font-size:.95rem;margin-bottom:.15rem}
+.cs-board p{font-size:.8rem;color:var(--muted)}
+
+/* Timeline */
+.cs-timeline{position:relative;max-width:720px;margin:2.5rem auto 0;padding-left:0}
+.cs-timeline::before{
+content:'';position:absolute;left:24px;top:12px;bottom:12px;width:2px;
+background:linear-gradient(180deg,var(--secondary),var(--accent));
+border-radius:2px;
+}
+@media(min-width:640px){
+.cs-timeline{padding-left:0}
+.cs-timeline::before{left:50%;transform:translateX(-50%)}
+}
+.cs-step{position:relative;padding:0 0 2rem 4rem}
+@media(min-width:640px){
+.cs-step{width:50%;padding:0 2.5rem 2.5rem 0;text-align:right}
+.cs-step:nth-child(even){margin-left:50%;padding:0 0 2.5rem 2.5rem;text-align:left}
+}
+.cs-step__dot{
+position:absolute;left:14px;top:4px;width:22px;height:22px;border-radius:50%;
+background:var(--white);border:3px solid var(--secondary);
+box-shadow:0 0 0 6px rgba(47,133,90,.13);z-index:2;
+}
+@media(min-width:640px){
+.cs-step__dot{left:auto;right:-11px}
+.cs-step:nth-child(even) .cs-step__dot{left:-11px;right:auto}
+}
+.cs-step__num{
+font-family:'Poppins',sans-serif;font-size:.7rem;font-weight:700;
+color:var(--secondary);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.35rem;
+}
+.cs-step h3{font-size:1.1rem;margin-bottom:.35rem}
+.cs-step p{font-size:.9rem;color:var(--muted)}
+
+/* Docs */
+.cs-doc{
+display:flex;align-items:flex-start;gap:1rem;padding:1.35rem;
+background:
+linear-gradient(180deg,rgba(255,255,255,0) 40%,rgba(47,133,90,.05) 100%),
+#FFFFFF;
+border-radius:var(--radius-sm);border:1px solid var(--border);
+box-shadow:var(--shadow);position:relative;overflow:hidden;
+transition:transform .25s;
+}
+.cs-doc::after{
+content:'';position:absolute;inset:auto 0 0 0;height:52px;pointer-events:none;
+background:linear-gradient(0deg,rgba(112,183,126,.1),transparent);
+}
+.cs-doc:hover{transform:translateY(-3px)}
+.cs-doc__num{
+width:36px;height:36px;flex-shrink:0;border-radius:10px;
+background:rgba(47,133,90,.1);color:var(--secondary);
+font-family:'Poppins',sans-serif;font-weight:700;font-size:.9rem;
+display:grid;place-items:center;
+}
+.cs-doc h3{font-size:.95rem;margin-bottom:.2rem}
+.cs-doc p{font-size:.82rem;color:var(--muted)}
+
+/* Pricing */
+.cs-price{
+background:
+linear-gradient(180deg,rgba(255,255,255,0) 38%,rgba(47,133,90,.07) 100%),
+linear-gradient(180deg,#FFFFFF 0%,#F6FAF3 100%);
+border:1px solid var(--border);border-radius:var(--radius);
+padding:2rem 1.75rem;box-shadow:var(--shadow);position:relative;overflow:hidden;
+transition:transform .3s,box-shadow .3s;
+}
+.cs-price::after{
+content:'';position:absolute;left:0;right:0;bottom:0;height:90px;pointer-events:none;
+background:
+linear-gradient(0deg,rgba(212,167,44,.12),transparent 68%),
+radial-gradient(ellipse 80% 90% at 50% 110%,rgba(47,133,90,.14),transparent 68%);
+}
+.cs-price:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.cs-price--featured{
+border-color:transparent;
+background:
+linear-gradient(180deg,#FFFFFF 0%,#F7FBF4 55%,#EEF6EC 100%) padding-box,
+var(--grad) border-box;
+border:2px solid transparent;
+}
+.cs-price > *:not(.cs-price__badge){position:relative;z-index:1}
+.cs-price__badge{position:absolute;top:1rem;right:1rem;z-index:2;
+font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+background:var(--grad-gold);color:#fff;padding:.35rem .7rem;border-radius:999px;
+}
+.cs-price h3{font-size:1.25rem;margin-bottom:.25rem}
+.cs-price__sub{font-size:.85rem;color:var(--muted);margin-bottom:1.5rem}
+.cs-price__amount{
+font-family:'Poppins',sans-serif;font-size:2.35rem;font-weight:800;color:var(--primary);
+line-height:1;margin-bottom:.25rem;
+}
+.cs-price__amount small{font-size:.95rem;font-weight:600;color:var(--muted)}
+.cs-price__save{
+display:inline-block;margin:.5rem 0 1.25rem;font-size:.8rem;font-weight:600;
+color:#276749;background:rgba(112,183,126,.15);padding:.3rem .7rem;border-radius:999px;
+}
+.cs-price ul{margin:1.25rem 0 0;display:grid;gap:.7rem}
+.cs-price li{
+display:flex;align-items:flex-start;gap:.6rem;font-size:.9rem;color:var(--text);
+}
+.cs-price li svg{flex-shrink:0;width:18px;height:18px;color:var(--accent);margin-top:2px}
+.cs-price-note{
+margin-top:1.75rem;text-align:center;padding:1.15rem 1.5rem;
+background:rgba(15,23,42,.03);border-radius:var(--radius-sm);border:1px dashed var(--border);
+font-size:.9rem;color:var(--muted);
+}
+.cs-price-note strong{color:var(--primary)}
+
+/* Exam / Live */
+.cs-pill-grid{display:grid;gap:1rem;grid-template-columns:1fr}
+@media(min-width:640px){.cs-pill-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.cs-pill-grid--4{grid-template-columns:repeat(4,1fr)}}
+.cs-pill{
+padding:1.5rem;border-radius:var(--radius);
+background:
+linear-gradient(180deg,rgba(255,255,255,0) 42%,rgba(47,133,90,.06) 100%),
+linear-gradient(180deg,#FFFFFF,#F8FBF6);
+border:1px solid var(--border);box-shadow:var(--shadow);text-align:center;
+position:relative;overflow:hidden;transition:transform .25s;
+}
+.cs-pill::after{
+content:'';position:absolute;inset:auto 0 0 0;height:64px;pointer-events:none;
+background:linear-gradient(0deg,rgba(212,167,44,.09),transparent);
+}
+.cs-pill:hover{transform:translateY(-4px)}
+.cs-pill__icon{
+width:52px;height:52px;margin:0 auto 1rem;border-radius:16px;
+background:linear-gradient(135deg,rgba(47,133,90,.12),rgba(212,167,44,.1));
+display:grid;place-items:center;color:var(--secondary);
+}
+.cs-pill__icon svg{width:26px;height:26px}
+.cs-pill h3{font-size:1rem;margin-bottom:.35rem}
+.cs-pill p{font-size:.85rem;color:var(--muted)}
+.cs-pass{
+margin-top:1.75rem;display:flex;align-items:center;justify-content:center;gap:1rem;
+flex-wrap:wrap;padding:1.25rem 1.5rem;border-radius:var(--radius);
+background:linear-gradient(135deg,rgba(47,133,90,.09),rgba(212,167,44,.09));
+border:1px solid rgba(47,133,90,.13);
+}
+.cs-pass__label{font-weight:600;color:var(--primary)}
+.cs-pass__val{
+font-family:'Poppins',sans-serif;font-size:1.75rem;font-weight:800;
+background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+
+/* Principal */
+.cs-quote{
+max-width:820px;margin:0 auto;padding:2.5rem 2rem;
+background:linear-gradient(100deg,rgba(255,255,255,.96),rgba(243,248,243,.92));
+border:1px solid rgba(18,55,42,.1);border-radius:var(--radius);
+box-shadow:var(--shadow-lg);position:relative;
+}
+.cs-quote::before{
+content:'“';position:absolute;top:.5rem;left:1.25rem;
+font-family:'Poppins',sans-serif;font-size:5rem;line-height:1;
+background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+opacity:.35;
+}
+.cs-quote__salam{
+font-family:'Poppins',sans-serif;font-weight:700;color:var(--secondary);
+margin-bottom:1rem;position:relative;
+}
+.cs-quote p{color:var(--text);margin-bottom:1rem;position:relative}
+.cs-quote__sign{
+margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border);
+font-family:'Poppins',sans-serif;font-weight:700;color:var(--primary);
+}
+.cs-quote__sign span{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.85rem;color:var(--muted);margin-top:.2rem}
+
+/* FAQ — no backdrop-filter, no GPU layers (Android Chrome scroll-safe) */
+.cs-faq{
+max-width:760px;margin:2rem auto 0;display:grid;gap:.75rem;
+position:relative;z-index:1;
+}
+.cs-faq details{
+background:
+linear-gradient(180deg,rgba(255,255,255,0) 50%,rgba(47,133,90,.05) 100%),
+#FFFFFF;
+border:1px solid var(--border);border-radius:var(--radius-sm);
+box-shadow:var(--shadow);
+position:relative;
+transition:box-shadow .25s,border-color .25s;
+contain:layout style;
+-webkit-backface-visibility:visible;backface-visibility:visible;
+transform:none;will-change:auto;
+}
+.cs-faq details::after{
+content:'';display:block;height:3px;margin-top:-3px;pointer-events:none;
+background:linear-gradient(0deg,rgba(112,183,126,.08),transparent);
+}
+.cs-faq details[open]{box-shadow:var(--shadow-lg);border-color:rgba(47,133,90,.22)}
+.cs-faq summary{
+padding:1.15rem 1.35rem;font-family:'Poppins',sans-serif;font-weight:600;font-size:.95rem;
+cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+color:var(--primary);
+-webkit-tap-highlight-color:transparent;
+}
+.cs-faq summary::-webkit-details-marker{display:none}
+.cs-faq summary::after{
+content:'';width:20px;height:20px;flex-shrink:0;
+background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232F855A'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 4v16m8-8H4'/%3E%3C/svg%3E") center/contain no-repeat;
+transform:none;
+}
+.cs-faq details[open] summary::after{
+background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232F855A'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 12h14'/%3E%3C/svg%3E") center/contain no-repeat;
+transform:none;
+}
+.cs-faq details[open] summary{border-bottom:1px solid var(--border)}
+.cs-faq .cs-faq__a{padding:1rem 1.35rem 1.25rem;font-size:.92rem;color:var(--muted)}
+.cs-section--dark .cs-faq details::after{
+background:linear-gradient(0deg,rgba(212,167,44,.16),transparent);
+}
+#faqs.cs-section{overflow:visible;isolation:isolate}
+
+/* Contact */
+.cs-contact-grid{display:grid;gap:1.5rem}
+@media(min-width:800px){.cs-contact-grid{grid-template-columns:1fr 1.2fr}}
+.cs-contact-info{display:grid;gap:1rem}
+.cs-contact-item{
+display:flex;gap:1rem;padding:1.25rem;
+background:
+linear-gradient(180deg,rgba(255,255,255,0) 45%,rgba(47,133,90,.055) 100%),
+#FFFFFF;
+border-radius:var(--radius-sm);border:1px solid var(--border);box-shadow:var(--shadow);
+position:relative;overflow:hidden;
+}
+.cs-contact-item::after{
+content:'';position:absolute;inset:auto 0 0 0;height:50px;pointer-events:none;
+background:linear-gradient(0deg,rgba(212,167,44,.08),transparent);
+}
+.cs-contact-item__icon{
+width:44px;height:44px;flex-shrink:0;border-radius:12px;
+background:linear-gradient(135deg,rgba(47,133,90,.12),rgba(212,167,44,.1));
+display:grid;place-items:center;color:var(--secondary);
+}
+.cs-contact-item__icon svg{width:22px;height:22px}
+.cs-contact-item h3{font-size:.9rem;margin-bottom:.2rem}
+.cs-contact-item p{font-size:.9rem;color:var(--muted)}
+.cs-map{
+min-height:280px;border-radius:var(--radius);border:1px solid var(--border);
+background:
+linear-gradient(135deg,rgba(47,133,90,.07),rgba(212,167,44,.07)),
+repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(15,23,42,.03) 24px,rgba(15,23,42,.03) 25px),
+repeating-linear-gradient(90deg,transparent,transparent 24px,rgba(15,23,42,.03) 24px,rgba(15,23,42,.03) 25px),
+var(--white);
+display:grid;place-items:center;box-shadow:var(--shadow);overflow:hidden;
+}
+.cs-map__inner{text-align:center;padding:2rem}
+.cs-map__inner svg{width:48px;height:48px;margin:0 auto 1rem;color:var(--secondary)}
+.cs-map__inner h3{font-size:1.05rem;margin-bottom:.35rem}
+.cs-map__inner p{font-size:.9rem;color:var(--muted)}
+.cs-contact-form{
+padding:1.6rem;border-radius:24px;background:rgba(255,255,255,.82);
+backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.85);
+box-shadow:var(--shadow-lg);
+}
+.cs-contact-form__head{display:flex;align-items:center;gap:.9rem;margin-bottom:1.3rem}
+.cs-contact-form__head span{
+width:48px;height:48px;border-radius:15px;display:grid;place-items:center;
+background:var(--grad);color:#fff;box-shadow:0 10px 24px rgba(47,133,90,.25);
+}
+.cs-contact-form__head svg{width:23px;height:23px}
+.cs-contact-form__head h3{font-size:1.15rem;margin-bottom:.15rem}
+.cs-contact-form__head p{font-size:.8rem;color:var(--muted)}
+.cs-form-grid{display:grid;gap:1rem}
+@media(min-width:560px){.cs-form-grid{grid-template-columns:1fr 1fr}}
+.cs-field{display:grid;gap:.4rem}
+.cs-field--full{grid-column:1/-1}
+.cs-field label{font-size:.78rem;font-weight:700;color:var(--primary)}
+.cs-field input,.cs-field select,.cs-field textarea{
+width:100%;font:inherit;font-size:.9rem;color:var(--text);background:#F8FBF6;
+border:1px solid rgba(18,55,42,.12);border-radius:13px;padding:.82rem .95rem;
+outline:none;transition:border-color .2s,box-shadow .2s,background .2s;
+}
+.cs-field textarea{min-height:120px;resize:vertical}
+.cs-field input:focus,.cs-field select:focus,.cs-field textarea:focus{
+background:#fff;border-color:rgba(47,133,90,.55);box-shadow:0 0 0 4px rgba(47,133,90,.1);
+}
+.cs-form-submit{width:100%;margin-top:.2rem}
+.cs-form-status{display:none;margin-top:.8rem;font-size:.82rem;font-weight:600}
+.cs-form-status.is-visible{display:block}
+.cs-form-status.is-ok{color:var(--secondary)}
+.cs-form-status.is-err{color:#B42318}
+.cs-form-submit[disabled]{opacity:.7;cursor:wait;transform:none}
+.cs-social{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+.cs-social a{
+width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+background:var(--white);border:1px solid var(--border);color:var(--primary);
+box-shadow:var(--shadow);transition:transform .25s,background .25s,color .25s;
+}
+.cs-social a:hover{transform:translateY(-3px);background:var(--grad);color:#fff;border-color:transparent}
+.cs-social a svg{width:20px;height:20px}
+
+/* Footer */
+.cs-footer{
+background:var(--primary);color:rgba(255,255,255,.75);padding:3.5rem 0 1.75rem;margin-top:2rem;
+}
+.cs-footer__grid{
+display:grid;gap:2rem;margin-bottom:2.5rem;
+}
+@media(min-width:700px){.cs-footer__grid{grid-template-columns:1.4fr 1fr 1fr}}
+.cs-footer__brand{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.4rem;color:#fff;margin-bottom:.5rem}
+.cs-footer__brand span{color:#5EEAD4}
+.cs-footer p{font-size:.9rem;max-width:280px}
+.cs-footer h4{font-family:'Poppins',sans-serif;color:#fff;font-size:.95rem;margin-bottom:1rem}
+.cs-footer ul{display:grid;gap:.55rem}
+.cs-footer a{font-size:.9rem;transition:color .2s}
+.cs-footer a:hover{color:#fff}
+.cs-footer__bottom{
+padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);
+font-size:.82rem;text-align:center;color:rgba(255,255,255,.5);
+}
+
+/* School imagery, faculty and premium 3D interactions */
+.cs-card,.cs-board,.cs-doc,.cs-pill,.cs-price,.cs-team-card{
+transform-style:preserve-3d;
+}
+@media(hover:hover){
+.cs-card:hover,.cs-board:hover,.cs-doc:hover,.cs-pill:hover{
+transform:perspective(900px) translateY(-8px) rotateX(2.5deg) rotateY(-2deg);
+}
+.cs-price:hover{transform:perspective(900px) translateY(-9px) rotateX(2deg)}
+}
+.cs-campus-gallery{
+display:grid;grid-template-columns:1.25fr .75fr;grid-template-rows:145px 145px;
+gap:1rem;margin:0 auto 2.5rem;max-width:980px;
+}
+.cs-campus-gallery figure{
+position:relative;overflow:hidden;border-radius:22px;box-shadow:var(--shadow);
+background:linear-gradient(135deg,#edf6ee,#f8f6ea);
+min-height:145px;
+}
+.cs-campus-gallery figure:first-child{grid-row:1/3}
+.cs-campus-gallery img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.cs-campus-gallery figure:hover img{transform:scale(1.06)}
+.cs-campus-gallery figcaption{
+position:absolute;left:1rem;bottom:1rem;padding:.45rem .8rem;border-radius:999px;
+background:rgba(255,255,255,.86);backdrop-filter:blur(10px);color:var(--primary);
+font-size:.75rem;font-weight:700;box-shadow:var(--shadow);
+}
+@media(max-width:639px){
+.cs-campus-gallery{grid-template-columns:1fr 1fr;grid-template-rows:210px 120px}
+.cs-campus-gallery figure:first-child{grid-column:1/3;grid-row:auto}
+}
+.cs-course .cs-card{overflow:hidden;isolation:isolate}
+.cs-course .cs-card::before{
+content:'';display:block;flex:0 0 155px;margin:-1.75rem -1.75rem 1.4rem;
+background-position:center;background-size:cover;
+transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .4s;
+filter:saturate(.92);
+}
+.cs-course .cs-card:hover::before{transform:scale(1.045);filter:saturate(1.08)}
+.cs-course .cs-card:nth-child(1)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/8471835/pexels-photo-8471835.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-course .cs-card:nth-child(2)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/5212338/pexels-photo-5212338.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-course .cs-card:nth-child(3)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/6238050/pexels-photo-6238050.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-course .cs-card:nth-child(4)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-course .cs-card:nth-child(5)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-course .cs-card:nth-child(6)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/6693656/pexels-photo-6693656.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-course .cs-card:nth-child(7)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/6146970/pexels-photo-6146970.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-course .cs-card:nth-child(8)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/4021811/pexels-photo-4021811.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-course .cs-card:nth-child(9)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-course .cs-card:nth-child(10)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-course .cs-card:nth-child(11)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-course .cs-card:nth-child(12)::before{background-image:linear-gradient(0deg,rgba(18,55,42,.18),transparent),url('https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=480')}
+.cs-team.cs-section--dark{
+background:
+radial-gradient(circle at 8% 12%,rgba(112,183,126,.22),transparent 32%),
+radial-gradient(circle at 92% 88%,rgba(212,167,44,.16),transparent 34%),
+linear-gradient(165deg,#081F16 0%,#0F2F24 50%,#12372A 100%);
+}
+.cs-team-slider{position:relative;margin:0 -.25rem}
+.cs-team-track{
+display:flex;gap:1.25rem;overflow-x:auto;overflow-y:hidden;
+scroll-snap-type:x mandatory;scroll-behavior:smooth;
+-webkit-overflow-scrolling:touch;touch-action:pan-x;
+padding:.35rem .75rem 1.25rem;scrollbar-width:none;
+}
+.cs-team-track::-webkit-scrollbar{display:none}
+.cs-team-card{
+position:relative;flex:0 0 min(86vw,320px);min-height:440px;overflow:hidden;
+scroll-snap-align:start;scroll-snap-stop:always;
+border-radius:28px 28px 36px 36px;
+background:linear-gradient(160deg,#12372A,#1B4A34);
+box-shadow:0 18px 50px rgba(18,55,42,.18);
+border:1px solid rgba(255,255,255,.18);
+transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s;
+isolation:isolate;
+}
+@media(min-width:640px){.cs-team-card{flex-basis:min(46vw,340px)}}
+@media(min-width:960px){.cs-team-card{flex-basis:min(31vw,360px);scroll-snap-align:start}}
+.cs-team-card img{
+position:absolute;inset:0;width:100%;height:100%;
+object-fit:cover;object-position:center top;
+transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .45s;
+}
+.cs-team-card::before{
+content:'';position:absolute;inset:12px;border-radius:22px;
+border:1px solid rgba(255,255,255,.22);
+box-shadow:inset 0 0 0 1px rgba(212,167,44,.15);
+pointer-events:none;z-index:2;
+}
+.cs-team-card::after{
+content:'';position:absolute;inset:0;
+background:
+radial-gradient(circle at 80% 12%,rgba(242,207,114,.22),transparent 28%),
+linear-gradient(180deg,transparent 28%,rgba(8,35,25,.35) 55%,rgba(8,35,25,.96) 100%);
+z-index:1;
+}
+.cs-team-card__info{
+position:absolute;z-index:3;left:0;right:0;bottom:0;
+padding:1.6rem 1.35rem 1.35rem;
+transform:translateY(8px);
+transition:transform .45s cubic-bezier(.2,.8,.2,1);
+}
+.cs-team-card__subject{
+display:inline-flex;align-items:center;gap:.35rem;
+margin-bottom:.7rem;padding:.38rem .75rem;border-radius:999px;
+background:linear-gradient(135deg,#FFF1BD,#F2CF72);color:#5C4300;
+font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+.cs-team-card h3{
+color:#fff;font-size:clamp(1.05rem,2.4vw,1.22rem);margin-bottom:.35rem;
+text-shadow:0 8px 24px rgba(0,0,0,.35);
+}
+.cs-team-card p{color:rgba(255,255,255,.78);font-size:.84rem;line-height:1.5}
+.cs-team-card__glow{
+position:absolute;width:140px;height:140px;border-radius:50%;
+background:radial-gradient(circle,rgba(112,183,126,.35),transparent 70%);
+top:-30px;right:-20px;z-index:1;pointer-events:none;filter:blur(4px);
+}
+.cs-team-nav{
+display:flex;align-items:center;justify-content:flex-start;gap:.75rem;
+margin-top:.35rem;flex-wrap:wrap;
+}
+.cs-team-btn{
+width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.22);
+background:rgba(255,255,255,.08);color:#F2F8F4;cursor:pointer;
+display:inline-flex;align-items:center;justify-content:center;
+transition:background .25s,transform .25s,border-color .25s;
+backdrop-filter:blur(8px);
+}
+.cs-team-btn:hover{background:rgba(255,255,255,.16);border-color:rgba(242,207,114,.45);transform:translateY(-2px)}
+.cs-team-btn:focus-visible{outline:2px solid #F2CF72;outline-offset:3px}
+.cs-team-btn svg{width:18px;height:18px}
+.cs-team-dots{display:flex;align-items:center;gap:.45rem;padding:0 .35rem}
+.cs-team-dot{
+width:8px;height:8px;border-radius:50%;border:0;padding:0;cursor:pointer;
+background:rgba(255,255,255,.28);transition:transform .25s,background .25s,width .25s;
+}
+.cs-team-dot.is-active{width:22px;border-radius:999px;background:linear-gradient(135deg,#F2CF72,#D4A72C)}
+@media(hover:hover){
+.cs-team-card:hover{
+transform:perspective(1100px) translateY(-12px) rotateX(4deg) rotateY(-4deg) scale(1.01);
+box-shadow:0 40px 90px rgba(18,55,42,.32),0 0 0 1px rgba(212,167,44,.25);
+}
+.cs-team-card:hover img{transform:scale(1.08);filter:saturate(1.1) contrast(1.05)}
+.cs-team-card:hover .cs-team-card__info{transform:translateY(0)}
+.cs-team-card:nth-child(even):hover{
+transform:perspective(1100px) translateY(-12px) rotateX(4deg) rotateY(4deg) scale(1.01);
+}
+}
+#live-learning.cs-section--light{
+background:
+radial-gradient(ellipse 70% 50% at 80% 20%,rgba(212,167,44,.12),transparent 55%),
+linear-gradient(180deg,#F0F6F0 0%,#E4EFE6 100%);
+}
+.cs-section--dark .cs-quote{
+background:linear-gradient(100deg,rgba(255,255,255,.1),rgba(255,255,255,.04));
+border-color:rgba(255,255,255,.12);
+}
+.cs-section--dark .cs-about-service{
+background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.04));
+}
+.cs-section--dark .cs-stats__grid{
+background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);
+}
+
+/* Reveal */
+.cs-reveal{animation:cs-rise .7s ease both}
+.cs-inview{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.cs-inview.is-visible{opacity:1;transform:none}
+.cs-stagger>*{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.cs-stagger.is-visible>*{opacity:1;transform:none}
+.cs-stagger.is-visible>*:nth-child(2){transition-delay:.06s}
+.cs-stagger.is-visible>*:nth-child(3){transition-delay:.12s}
+.cs-stagger.is-visible>*:nth-child(4){transition-delay:.18s}
+.cs-stagger.is-visible>*:nth-child(5){transition-delay:.24s}
+.cs-stagger.is-visible>*:nth-child(6){transition-delay:.3s}
+.cs-stagger.is-visible>*:nth-child(7){transition-delay:.36s}
+.cs-stagger.is-visible>*:nth-child(8){transition-delay:.42s}
+.cs-stagger.is-visible>*:nth-child(9){transition-delay:.48s}
+.cs-stagger.is-visible>*:nth-child(n+10){transition-delay:.54s}
+
+/* Floating action buttons */
+.cs-fab{
+position:fixed;right:18px;z-index:1100;width:54px;height:54px;border-radius:50%;
+display:grid;place-items:center;cursor:pointer;border:none;
+box-shadow:0 12px 30px rgba(8,35,25,.28);transition:transform .3s ease,opacity .3s ease,box-shadow .3s ease;
+}
+.cs-fab:hover{transform:translateY(-4px) scale(1.05)}
+.cs-fab svg{width:26px;height:26px}
+.cs-fab--wa{
+bottom:20px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;
+animation:cs-fab-pulse 2.4s ease-in-out infinite;
+}
+@media (prefers-reduced-motion:reduce){.cs-fab--wa{animation:none}}
+.cs-fab--top{
+bottom:84px;background:linear-gradient(135deg,#2F855A,#D4A72C);color:#fff;
+opacity:0;visibility:hidden;transform:translateY(12px);
+}
+.cs-fab--top.is-shown{opacity:1;visibility:visible;transform:none}
+.cs-fab--top svg{width:22px;height:22px}
+@keyframes cs-fab-pulse{
+0%,100%{box-shadow:0 12px 30px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,.4)}
+50%{box-shadow:0 12px 30px rgba(37,211,102,.35),0 0 0 14px rgba(37,211,102,0)}
+}
+.cs-fab--wa::after{
+content:'Chat on WhatsApp';position:absolute;right:64px;white-space:nowrap;
+background:#0C3325;color:#fff;font-size:.75rem;font-weight:600;padding:.45rem .7rem;
+border-radius:8px;opacity:0;transform:translateX(6px);pointer-events:none;transition:.25s;
+}
+.cs-fab--wa:hover::after{opacity:1;transform:translateX(0)}
+@media(max-width:560px){.cs-fab--wa::after{display:none}}
+
+/* Scroll progress bar */
+.cs-progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:1200;
+background:linear-gradient(90deg,#2F855A,#70B77E,#D4A72C);transition:width .1s linear}
+
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{animation:none!important;transition:none!important}
+html{scroll-behavior:auto}
+.cs-inview,.cs-stagger>*{opacity:1!important;transform:none!important}
+}
+
+/* ===== Performance & smooth-scroll — all sections (Android Chrome safe) ===== */
+html{-webkit-text-size-adjust:100%}
+body{-webkit-overflow-scrolling:touch;overscroll-behavior-y:none}
+a,button,label,summary,.cs-fab,.cs-btn,.cs-nav__toggle,.cs-nav__apply,.cs-apply-btn{
+-webkit-tap-highlight-color:transparent;touch-action:manipulation;
+}
+
+/* Touch / mobile / tablet: kill every known Android Chrome scroll-glitch source */
+@media (hover:none),(pointer:coarse),(max-width:1023px){
+/* 1) No backdrop blur anywhere (GPU layer corruption) */
+*,*::before,*::after{
+backdrop-filter:none!important;
+-webkit-backdrop-filter:none!important;
+}
+
+/* 2) Stop infinite / decorative animations */
+.cs-orb,.cs-shape,.cs-hero-shape,.cs-illus img,.cs-chip__dot,.cs-fab--wa,
+.cs-glass--float,.cs-glass--main,.cs-reveal{animation:none!important}
+.cs-illus img,.cs-glass--main,.cs-glass--float{transform:none!important}
+.cs-orb,.cs-shape{filter:none!important;opacity:.3}
+.cs-orb{background:rgba(112,183,126,.35)}
+
+/* 3) Solid sticky nav — no blur repaint while scrolling */
+.cs-nav__inner{
+background:#fff!important;
+backdrop-filter:none!important;
+-webkit-backdrop-filter:none!important;
+}
+
+/* 4) Scroll-reveal OFF on mobile — translateY + opacity causes ghosting */
+.cs-inview,.cs-stagger>*,.cs-reveal{
+opacity:1!important;
+transform:none!important;
+transition:none!important;
+animation:none!important;
+}
+
+/* 5) All cards / panels: no forced GPU, no filter, no transform thrash */
+.cs-section,.cs-section > *,
+.cs-card,.cs-board,.cs-doc,.cs-pill,.cs-price,.cs-form,
+.cs-about-service,.cs-contact-item,.cs-team-card,.cs-quote,
+.cs-stats__grid,.cs-step__card,.cs-price-note,
+.cs-faq,.cs-faq details,.cs-faq summary,.cs-faq .cs-faq__a,
+.cs-glass,.cs-glass--main,.cs-glass--float{
+transform:none!important;
+will-change:auto!important;
+filter:none!important;
+-webkit-filter:none!important;
+-webkit-backface-visibility:visible!important;
+backface-visibility:visible!important;
+}
+
+/* 6) Sections: overflow visible so compositor doesn't clip/ghost layers */
+.cs-section{overflow:visible!important}
+.cs-card,.cs-board,.cs-doc,.cs-pill,.cs-price,.cs-contact-item,.cs-team-card{
+transition:none!important;
+}
+
+/* 7) Fixed FABs + progress: no transform compositing over content */
+.cs-fab,.cs-fab--top,.cs-fab--top.is-shown,.cs-progress{
+transform:none!important;
+will-change:auto!important;
+transition:opacity .2s ease,visibility .2s ease!important;
+}
+.cs-progress{transition:none!important}
+
+/* 8) Hero extras that paint over scroll */
+.cs-hero::after,.cs-hero__bg .cs-orb,.cs-hero__bg .cs-shape{pointer-events:none}
+.cs-glass--float{backdrop-filter:none!important;background:rgba(255,255,255,.18)!important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="cs-nav">
+<div class="cs-wrap cs-nav__inner">
+<div class="cs-nav__left">
+<a href="#home" class="cs-logo">Confo<span>Study</span></a>
+
+<nav class="cs-nav__links" aria-label="Primary">
+<a href="#home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z"/></svg><span>Home</span></a>
+<a href="#about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg><span>About</span></a>
+<a href="#courses"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span>Courses</span></a>
+<a href="#admissions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg><span>Admissions</span></a>
+<a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.2.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Contact</span></a>
+<div class="cs-drop">
+<button type="button" class="cs-drop__btn" aria-haspopup="true" aria-expanded="false">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+<span>More</span>
+<svg class="cs-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+</button>
+<div class="cs-drop__menu" role="menu">
+<a href="#fees" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Fee Structure</a>
+<a href="#why-us" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Why Us</a>
+<a href="#team" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Our Team</a>
+<a href="#principal" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Principal Message</a>
+<a href="#faqs" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 5M12 17h.01"/></svg>FAQs</a>
+</div>
+</div>
+</nav>
+</div>
+
+<a href="#admissions" class="cs-nav__apply cs-nav__cta" aria-label="Apply Now">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+<span class="cs-nav__apply-label">Apply Now</span>
+</a>
+
+<a href="#admissions" class="cs-nav__apply cs-nav__mobile-apply" aria-label="Apply Now">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+<span class="cs-nav__apply-label">Apply Now</span>
+</a>
+
+<input type="checkbox" id="cs-menu" class="cs-nav__check" aria-hidden="true">
+<label for="cs-menu" class="cs-nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+
+<nav class="cs-nav__drawer" aria-label="Mobile">
+<a href="#home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5z"/></svg>Home</a>
+<a href="#about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>About</a>
+<a href="#courses"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Courses</a>
+<a href="#admissions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>Admissions</a>
+<a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.2.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Contact</a>
+<div class="cs-drawer-label">More</div>
+<a href="#fees"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Fee Structure</a>
+<a href="#why-us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Why Us</a>
+<a href="#team"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Our Team</a>
+<a href="#principal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Principal Message</a>
+<a href="#faqs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 5M12 17h.01"/></svg>FAQs</a>
+<div class="cs-btn-row">
+<a href="#admissions" class="cs-apply-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>Apply Now</a>
+</div>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="cs-hero" id="home">
+<div class="cs-hero__bg" aria-hidden="true">
+<span class="cs-orb cs-orb--1"></span>
+<span class="cs-orb cs-orb--2"></span>
+<span class="cs-orb cs-orb--3"></span>
+<span class="cs-shape cs-shape--1"></span>
+<span class="cs-shape cs-shape--2"></span>
+<span class="cs-shape cs-shape--3"></span>
+</div>
+<div class="cs-wrap cs-hero__grid">
+<div>
+<span class="cs-hero__badge"><span class="cs-chip__dot"></span> Admissions Open · Online Coaching</span>
+<p class="cs-hero__brand">Confo<em>Study</em> · Concept Focus Study</p>
+<h1>Learn Today.<span class="line2">Lead Tomorrow.</span></h1>
+<p class="cs-hero__desc">Welcome to ConfoStudy — an online coaching institute where quality education is just a click away. Accessible, affordable learning for students across the world.</p>
+<div class="cs-hero__ctas">
+<a href="#admissions" class="cs-btn cs-btn--primary">Admission Open</a>
+<a href="#courses" class="cs-btn cs-btn--ghost">View Courses</a>
+</div>
+<div class="cs-hero__stats">
+<div class="cs-hero__stat"><strong>2,500+</strong><span>Students</span></div>
+<div class="cs-hero__stat"><strong>7+</strong><span>Boards Covered</span></div>
+<div class="cs-hero__stat"><strong>40%</strong><span>Passing Standard</span></div>
+</div>
+</div>
+<div class="cs-hero__visual">
+<span class="cs-hero-shape cs-hero-shape--1" aria-hidden="true"></span>
+<span class="cs-hero-shape cs-hero-shape--2" aria-hidden="true"></span>
+<span class="cs-hero-shape cs-hero-shape--3" aria-hidden="true"></span>
+<div class="cs-glass cs-glass--main">
+<div class="cs-illus">
+<img src="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="International group of happy young students" fetchpriority="high" decoding="async" width="900" height="600">
+</div>
+</div>
+<div class="cs-glass cs-glass--float cs-glass--a">
+<div class="cs-chip"><span class="cs-chip__dot"></span> Live Classes</div>
+<p class="cs-stat-mini"><strong>Interactive</strong> Learn with experts</p>
+</div>
+<div class="cs-glass cs-glass--float cs-glass--b">
+<p class="cs-stat-mini"><strong>Worldwide</strong> Boards &amp; Cambridge covered</p>
+</div>
+<div class="cs-glass cs-glass--float cs-glass--c">
+<p class="cs-stat-mini"><strong>Concept Focus</strong> Clear. Confident. Ready.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="cs-section cs-stats cs-section--light" aria-label="Key statistics">
+<div class="cs-wrap">
+<div class="cs-stats__grid">
+<div class="cs-stat"><div class="cs-stat__num">2,500+</div><div class="cs-stat__label">Students</div></div>
+<div class="cs-stat"><div class="cs-stat__num">80+</div><div class="cs-stat__label">Teachers</div></div>
+<div class="cs-stat"><div class="cs-stat__num">25+</div><div class="cs-stat__label">Courses</div></div>
+<div class="cs-stat"><div class="cs-stat__num">7+</div><div class="cs-stat__label">Boards Covered</div></div>
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="cs-section cs-section--light" id="about">
+<div class="cs-wrap">
+<div class="cs-about-layout">
+<div class="cs-about-collage cs-stagger" aria-label="ConfoStudy learning experience">
+<figure class="cs-about-photo cs-about-photo--tall">
+<img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&amp;fit=crop&amp;w=700&amp;q=70" alt="Student reading a book outdoors on the grass" loading="lazy" decoding="async" width="700" height="900">
+</figure>
+<figure class="cs-about-photo cs-about-photo--round">
+<img src="https://images.pexels.com/photos/1206101/pexels-photo-1206101.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=480" alt="Happy students celebrating together at school" loading="lazy" decoding="async" width="480" height="480">
+</figure>
+<figure class="cs-about-photo cs-about-photo--soft">
+<img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&amp;fit=crop&amp;w=700&amp;q=70" alt="Bright classroom with desks ready for learning" loading="lazy" decoding="async" width="700" height="500">
+</figure>
+<div class="cs-about-badge">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2L3 7l9 5 9-5-9-5z"/><path d="M5 10v6c3 3 11 3 14 0v-6M21 7v6"/></svg>
+<div><strong>Quality First</strong><span>Accessible education across the world</span></div>
+</div>
+</div>
+<div class="cs-about-copy cs-inview">
+<p class="cs-eyebrow">About ConfoStudy</p>
+<h2 class="cs-title">Our Education System <span>Inspires You More.</span></h2>
+<p>Welcome to ConfoStudy, an online coaching institute where quality education is just a click away. We provide accessible, affordable, and high-quality online education to students across the world.</p>
+<p>Our experienced teachers focus on concept-based learning, regular assessments, personalized guidance, and exam-oriented preparation.</p>
+<div class="cs-about-services">
+<article class="cs-about-service">
+<div class="cs-about-service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+<div><h3>Concept-Based Education</h3><p>Clear understanding, regular assessments, and exam-ready preparation.</p></div>
+</article>
+<article class="cs-about-service">
+<div class="cs-about-service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+<div><h3>Worldwide Learning</h3><p>Join live online classes from any city with continuous teacher support.</p></div>
+</article>
+</div>
+<div class="cs-about-values">
+<span>Mission: Accessible Education</span>
+<span>Vision: Trusted Online Institute</span>
+<span>Learn Today. Lead Tomorrow.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- WHY US -->
+<section class="cs-section cs-section--dark" id="why-us">
+<div class="cs-wrap">
+<div class="cs-center" style="margin-bottom:2.5rem">
+<p class="cs-eyebrow">Why Choose Us</p>
+<h2 class="cs-title">Why Choose ConfoStudy</h2>
+<p class="cs-lead">Learn Today. Lead Tomorrow. — everything students need for concept clarity and exam success.</p>
+</div>
+<div class="cs-grid cs-grid--courses cs-feat cs-stagger">
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+<h3>Qualified Teachers</h3>
+<p>Qualified, experienced, and dedicated teachers who guide every student with care.</p>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+<h3>Concept-Based Learning</h3>
+<p>Strong focus on understanding concepts first — not rote memorization.</p>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>
+<h3>Live &amp; Recorded Classes</h3>
+<p>Attend live interactive sessions and revise with recordings where available.</p>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+<h3>Interactive Online Classes</h3>
+<p>Engage in interactive online learning with active discussion and doubt clearing.</p>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+<h3>Weekly &amp; Monthly Assessments</h3>
+<p>Regular weekly and monthly assessments to track progress and build exam confidence.</p>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+<h3>One-on-One Support</h3>
+<p>Personalized one-on-one academic support for students who need extra guidance.</p>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+<h3>Unlimited Study Support</h3>
+<p>Unlimited study hours and learning support so students can keep improving.</p>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+<h3>Affordable Fee Structure</h3>
+<p>Student-friendly fees with one-time payment discounts and installment options.</p>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+<h3>Study from Anywhere</h3>
+<p>Join online classes from anywhere in the world with flexible learning access.</p>
+</article>
+</div>
+</div>
+</section>
+
+<!-- COURSES -->
+<section class="cs-section cs-section--light" id="courses">
+<div class="cs-wrap">
+<div class="cs-center" style="margin-bottom:2.5rem">
+<p class="cs-eyebrow">Our Programs</p>
+<h2 class="cs-title">Courses Designed for Success</h2>
+<p class="cs-lead">Primary to Intermediate, entry tests, English, and Computer — for all major Pakistani boards.</p>
+</div>
+<div class="cs-grid cs-grid--courses cs-course cs-stagger">
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></div>
+<h3>Primary Classes</h3>
+<p>Strong early foundations with concept-based teaching for primary students.</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+<h3>Matric (Class IX &amp; X)</h3>
+<p>All Pakistani Boards — Federal, Sindh, Punjab, KPK, AKU-EB, and Cambridge O Levels and IGCSE.</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+<h3>Intermediate (XI &amp; XII)</h3>
+<p>All Pakistani Boards including F.Sc, ICS, I.Com, FA, and Cambridge A Levels.</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44L2 14"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44L22 14"/></svg></div>
+<h3>F.Sc</h3>
+<p>Pre-medical and pre-engineering Intermediate preparation with exam-focused teaching.</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h2v5H7zM11 10h2v3h-2zM15 7h2v6h-2z"/></svg></div>
+<h3>ICS</h3>
+<p>Intermediate Computer Science coaching aligned with board requirements.</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+<h3>I.Com</h3>
+<p>Commerce stream Intermediate preparation with clear concept teaching.</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+<h3>FA</h3>
+<p>Arts group Intermediate coaching with board-oriented practice and support.</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+<h3>MDCAT Preparation</h3>
+<p>Focused medical entry test preparation with concept clarity and practice.</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></div>
+<h3>ECAT Preparation</h3>
+<p>Engineering entry test preparation for Maths, Physics, and problem-solving skills.</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+<h3>Computer Courses</h3>
+<p>Practical computer courses to build useful digital skills for studies and careers.</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l5 5M12 3v10M19 8l-5 5"/><path d="M5 20h14"/></svg></div>
+<h3>English Language Courses</h3>
+<p>Improve English for school, boards, communication, and competitive readiness.</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+<article class="cs-card">
+<div class="cs-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+<h3>IELTS Preparation</h3>
+<p>Expert guidance for your target band score</p>
+<a href="#admissions" class="cs-btn cs-btn--outline cs-btn--sm">Learn More</a>
+</article>
+</div>
+</div>
+</section>
+
+<!-- BOARDS -->
+<section class="cs-section cs-section--dark" id="boards">
+<div class="cs-wrap">
+<div class="cs-center" style="margin-bottom:2.5rem">
+<p class="cs-eyebrow">Coverage</p>
+<h2 class="cs-title">Pakistani Boards We Cover</h2>
+<p class="cs-lead">We teach students from all major Pakistani boards, including Federal Board (FBISE), Sindh Board, Punjab Board, Khyber Pakhtunkhwa (KPK) Board, Aga Khan University Examination Board (AKU-EB), Cambridge O/A Levels, and Cambridge IGCSE.</p>
+</div>
+<div class="cs-grid cs-grid--2 cs-stagger" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+<div class="cs-board"><div class="cs-board__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div><div><h3>Federal Board (FBISE)</h3><p>Matric &amp; Intermediate preparation</p></div></div>
+<div class="cs-board"><div class="cs-board__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h3>Sindh Board</h3><p>Board-aligned concept teaching</p></div></div>
+<div class="cs-board"><div class="cs-board__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div><h3>Punjab Board</h3><p>Syllabus &amp; exam-oriented support</p></div></div>
+<div class="cs-board"><div class="cs-board__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h3>Khyber Pakhtunkhwa (KPK) Board</h3><p>Regional board preparation</p></div></div>
+<div class="cs-board"><div class="cs-board__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><div><h3>AKU-EB</h3><p>Aga Khan University Examination Board</p></div></div>
+<div class="cs-board"><div class="cs-board__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div><h3>Cambridge O/A Level</h3><p>O Level and A Level pathways</p></div></div>
+<div class="cs-board"><div class="cs-board__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div><h3>Cambridge IGCSE</h3><p>International General Certificate of Secondary Education</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- ADMISSIONS -->
+<section class="cs-section cs-section--light" id="admissions">
+<div class="cs-wrap">
+<div class="cs-center">
+<p class="cs-eyebrow">Admissions</p>
+<h2 class="cs-title">Simple Admission Process</h2>
+<p class="cs-lead">Students can apply online by filling out the admission form or by contacting us on WhatsApp: <a href="https://wa.me/923209207839">0320-9207839</a>, <a href="https://wa.me/923719207839">0371-9207839</a>.</p>
+</div>
+<div class="cs-timeline">
+<div class="cs-step">
+<span class="cs-step__dot" aria-hidden="true"></span>
+<p class="cs-step__num">Step 01</p>
+<h3>Apply Online / WhatsApp</h3>
+<p>Fill out the admission form online or contact us on our official WhatsApp number to start enrollment.</p>
+</div>
+<div class="cs-step">
+<span class="cs-step__dot" aria-hidden="true"></span>
+<p class="cs-step__num">Step 02</p>
+<h3>Submit Documents</h3>
+<p>Share the required documents so we can complete your student record and confirm admission.</p>
+</div>
+<div class="cs-step">
+<span class="cs-step__dot" aria-hidden="true"></span>
+<p class="cs-step__num">Step 03</p>
+<h3>Fee Confirmation</h3>
+<p>Fee is due on the date of admission. Choose one-time payment or monthly installments.</p>
+</div>
+<div class="cs-step">
+<span class="cs-step__dot" aria-hidden="true"></span>
+<p class="cs-step__num">Step 04</p>
+<h3>Join Classes</h3>
+<p>Get your batch timing and class access, then begin live interactive learning with ConfoStudy.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- DOCUMENTS -->
+<section class="cs-section cs-section--dark" id="documents">
+<div class="cs-wrap">
+<div class="cs-center" style="margin-bottom:2.5rem">
+<p class="cs-eyebrow">Enrollment</p>
+<h2 class="cs-title">Required Documents</h2>
+<p class="cs-lead">Keep these ready to complete admission without delays.</p>
+</div>
+<div class="cs-grid cs-grid--2 cs-stagger">
+<div class="cs-doc"><div class="cs-doc__num">01</div><div><h3>Student B-Form</h3><p>Student B-Form (if available).</p></div></div>
+<div class="cs-doc"><div class="cs-doc__num">02</div><div><h3>Father’s CNIC</h3><p>Father’s CNIC (Front &amp; Back Copy).</p></div></div>
+<div class="cs-doc"><div class="cs-doc__num">03</div><div><h3>Previous Year’s Mark Sheet</h3><p>Previous year’s mark sheet for academic records.</p></div></div>
+<div class="cs-doc"><div class="cs-doc__num">04</div><div><h3>Passport-size Photograph</h3><p>Recent passport-size photograph of the student.</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- FEES -->
+<section class="cs-section cs-section--light" id="fees">
+<div class="cs-wrap">
+<div class="cs-center" style="margin-bottom:2.5rem">
+<p class="cs-eyebrow">Pricing</p>
+<h2 class="cs-title">Transparent Fee Structure</h2>
+<p class="cs-lead">No annual fee. Fee is due on the date of admission. Choose one-time payment or installments.</p>
+</div>
+<div class="cs-grid cs-grid--2 cs-stagger" style="max-width:860px;margin:0 auto">
+<div class="cs-price cs-price--featured">
+<span class="cs-price__badge">Save Rs.2,000</span>
+<h3>Class IX &amp; X</h3>
+<p class="cs-price__sub">Matric coaching package</p>
+<div class="cs-price__amount"><small>Rs.</small>10,000</div>
+<span class="cs-price__save">Rs.2,000 discount on one-time payment</span>
+<ul>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> One-time Payment: Rs.10,000</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Three Monthly Installments: Rs.4,000 each</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Rs.2,000 discount on one-time payment</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Live interactive classes</li>
+</ul>
+<a href="#contact" class="cs-btn cs-btn--primary" style="width:100%;margin-top:1.75rem">Enroll Now</a>
+</div>
+<div class="cs-price">
+<span class="cs-price__badge">Save Rs.3,000</span>
+<h3>Class XI &amp; XII</h3>
+<p class="cs-price__sub">Intermediate coaching package</p>
+<div class="cs-price__amount"><small>Rs.</small>12,000</div>
+<span class="cs-price__save">Rs.3,000 discount on one-time payment</span>
+<ul>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> One-time Payment: Rs.12,000</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Three Monthly Installments: Rs.5,000 each</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Rs.3,000 discount on one-time payment</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Board-focused preparation</li>
+</ul>
+<a href="#contact" class="cs-btn cs-btn--outline" style="width:100%;margin-top:1.75rem">Enroll Now</a>
+</div>
+</div>
+<div class="cs-price-note">
+<strong>Fee Due Date:</strong> Fee is due on the date of admission.<br>
+<strong>Late Fee Policy:</strong> A late fee of <strong>Rs.500</strong> will be charged if payment is made within 10 days after the due date. <strong>No Annual Fee.</strong>
+</div>
+</div>
+</section>
+
+<!-- EXAM SYSTEM -->
+<section class="cs-section cs-section--dark" id="exams">
+<div class="cs-wrap">
+<div class="cs-center" style="margin-bottom:2.5rem">
+<p class="cs-eyebrow">Assessment</p>
+<h2 class="cs-title">Examination System</h2>
+<p class="cs-lead">Question papers are prepared according to the student’s respective board syllabus.</p>
+</div>
+<div class="cs-pill-grid cs-pill-grid--4">
+<div class="cs-pill">
+<div class="cs-pill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+<h3>Weekly Tests</h3>
+<p>Regular weekly tests to reinforce learning and track progress.</p>
+</div>
+<div class="cs-pill">
+<div class="cs-pill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+<h3>Monthly Tests</h3>
+<p>Monthly tests for broader syllabus coverage and consistency.</p>
+</div>
+<div class="cs-pill">
+<div class="cs-pill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
+<h3>Mid-Term Examinations</h3>
+<p>Mid-term exams to measure depth, pace, and readiness.</p>
+</div>
+<div class="cs-pill">
+<div class="cs-pill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
+<h3>Pre-Board Examinations</h3>
+<p>Pre-board papers prepared according to each student’s board.</p>
+</div>
+</div>
+<div class="cs-pass">
+<span class="cs-pass__label">Passing Marks — Students must obtain</span>
+<span class="cs-pass__val">40%</span>
+<span class="cs-pass__label">of the total marks to pass</span>
+</div>
+</div>
+</section>
+
+<!-- LIVE LEARNING -->
+<section class="cs-section cs-section--light" id="live-learning">
+<div class="cs-wrap">
+<div class="cs-center" style="margin-bottom:2.5rem">
+<p class="cs-eyebrow">Learning Modes</p>
+<h2 class="cs-title">Live Classes</h2>
+<p class="cs-lead">Most classes are live, and recordings may be provided when available. Different morning and evening batches are offered depending on the course.</p>
+</div>
+<div class="cs-pill-grid cs-pill-grid--4">
+<div class="cs-pill">
+<div class="cs-pill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>
+<h3>Live Interactive Classes</h3>
+<p>Real-time interactive teaching with active student participation.</p>
+</div>
+<div class="cs-pill">
+<div class="cs-pill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.5"/><path d="M10 8l6 4-6 4V8z"/></svg></div>
+<h3>Recorded Lectures</h3>
+<p>Recorded lectures were available for flexible revision.</p>
+</div>
+<div class="cs-pill">
+<div class="cs-pill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+<h3>Class Recordings for Revision</h3>
+<p>Use class recordings to revise topics before tests and exams.</p>
+</div>
+<div class="cs-pill">
+<div class="cs-pill__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+<h3>Question &amp; Answer Sessions</h3>
+<p>Dedicated Q&amp;A support to clear doubts with teachers.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- OUR TEAM -->
+<section class="cs-section cs-team cs-section--dark" id="team">
+<div class="cs-wrap">
+<div style="margin-bottom:2.5rem">
+<p class="cs-eyebrow">Meet the Mentors</p>
+<h2 class="cs-title">Our Expert Faculty</h2>
+<p class="cs-lead">Learn from experienced teachers who turn difficult concepts into clear, confident understanding.</p>
+</div>
+<div class="cs-team-slider" data-team-slider>
+<div class="cs-team-track cs-stagger" data-team-track tabindex="0" role="list" aria-label="Faculty profiles">
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/07/SIR-RONALD-WILFRED-XI-XII-MDCAT-ECAT-PHYSICS.jpg" alt="Sir Ronald Wilfred, Physics teacher at ConfoStudy" width="720" height="900" loading="eager" decoding="async" fetchpriority="high" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Physics</span>
+<h3>Sir Ronald Wilfred</h3>
+<p>Classes XI–XII · MDCAT · ECAT</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/08/Sir-Julian-Wilfred-IX-X-Physics.jpg" alt="Sir Julian Wilfred, Physics teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Physics</span>
+<h3>Sir Julian Wilfred</h3>
+<p>Classes IX–X</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/07/SIR-M.-ASHRAF-IX-X-PHYSICS.jpg" alt="Sir M. Ashraf, Physics teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Physics</span>
+<h3>Sir M. Ashraf</h3>
+<p>Classes IX–X</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/07/SIR-IRFAN-SHEIKH-IX-X-XI-XII-MDCAT-ECAT-CHEMISTRY.jpg" alt="Sir Irfan Sheikh, Chemistry teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Chemistry</span>
+<h3>Sir Irfan Sheikh</h3>
+<p>Classes IX–X · XI–XII · MDCAT · ECAT</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/08/Sir-Ahmed-Raza-IX-X-Chemistry.jpeg" alt="Sir Ahmed Raza, Chemistry teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Chemistry</span>
+<h3>Sir Ahmed Raza</h3>
+<p>Classes IX–X</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/08/Sir-Shuja-Ahmed-Chemistry-Lecturer-IX-X-XI-XII.jpg" alt="Sir Shuja Ahmed, Chemistry lecturer at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Chemistry</span>
+<h3>Sir Shuja Ahmed</h3>
+<p>Classes IX–X · XI–XII</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/07/SIR-RAVI-RAJPUT-IX-X-XI-XII-ECAT-MATHEMATICS.jpg" alt="Sir Ravi Rajput, Mathematics teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Mathematics</span>
+<h3>Sir Ravi Rajput</h3>
+<p>Classes IX–X · XI–XII · ECAT</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/08/SIR-BILAL-AHMED-IX-X-XI-XII-ECAT-MATHEMATICS.jpg" alt="Sir Bilal Ahmed, Mathematics teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Mathematics</span>
+<h3>Sir Bilal Ahmed</h3>
+<p>Classes IX–X · XI–XII · ECAT</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/08/SIR-MOHTASHIM-IX-X-XI-XII-ECAT-MATHEMATICS.jpg" alt="Sir Mohtashim, Mathematics teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Mathematics</span>
+<h3>Sir Mohtashim</h3>
+<p>Classes IX–X · XI–XII · ECAT</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/07/MISS-RAMSHA-KAZIM-IX-X-XI-XII-MDCAT-BIOLOGY.jpg" alt="Miss Ramsha Kazim, Biology and Chemistry teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Biology · Chemistry</span>
+<h3>Miss Ramsha Kazim</h3>
+<p>Classes IX–X · XI–XII · MDCAT</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/08/Sir-M.-Hamid-IX-X-XI-XII-Biology-Instructor.jpg" alt="Sir M. Hamid, Biology instructor at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Biology</span>
+<h3>Sir M. Hamid</h3>
+<p>Classes IX–X · XI–XII</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/07/SIR-ADEEL-MEHMOOD-IX-X-XI-XII-MDCAT-ECAT-ENGLISH.jpg" alt="Sir Adeel Mehmood, English teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">English</span>
+<h3>Sir Adeel Mehmood</h3>
+<p>Classes IX–X · XI–XII · MDCAT · ECAT</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/08/Sir-Zimran-Candara-IX-X-XI-XII-English.jpg" alt="Sir Zimran Candara, English teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">English</span>
+<h3>Sir Zimran Candara</h3>
+<p>Classes IX–X · XI–XII</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/08/Sir-Saeed-IX-X-XI-XII-COMPUTER-LECTURER.jpg" alt="Sir Saeed, Computer lecturer at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Computer</span>
+<h3>Sir Saeed</h3>
+<p>Classes IX–X · XI–XII</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/08/SIR-ALI-TAIMOOR-IX-X-XI-XII-URDU-SINDHI.jpg" alt="Sir Ali Taimoor, Urdu, Islamiat, Pakistan Studies and Sindhi teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Urdu · Islamiat · P.Std · Sindhi</span>
+<h3>Sir Ali Taimoor</h3>
+<p>Classes IX–X · XI–XII</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/08/SIR-OWAIS-DUKH-I.COM-ADC-ACCOUNTING.jpg" alt="Sir Owais Dukh, Accounting teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">Accounting</span>
+<h3>Sir Owais Dukh</h3>
+<p>I.Com · ADC</p>
+</div>
+</article>
+<article class="cs-team-card" role="listitem">
+<span class="cs-team-card__glow" aria-hidden="true"></span>
+<img src="https://confostudy.com/wp-content/uploads/2026/08/SIR-JUNAID-IELTS-I.COM-ADC-B.MATH-STATISTICS.jpg" alt="Sir Junaid, B.Math Statistics teacher at ConfoStudy" width="720" height="900" loading="lazy" decoding="async" sizes="(max-width:639px) 86vw, (max-width:959px) 46vw, 360px">
+<div class="cs-team-card__info">
+<span class="cs-team-card__subject">B.Math · Statistics</span>
+<h3>Sir Junaid</h3>
+<p>IELTS · I.Com · ADC</p>
+</div>
+</article>
+</div>
+<div class="cs-team-nav" aria-label="Faculty slider controls">
+<button type="button" class="cs-team-btn" data-team-prev aria-label="Previous teachers">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+</button>
+<div class="cs-team-dots" data-team-dots></div>
+<button type="button" class="cs-team-btn" data-team-next aria-label="Next teachers">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PRINCIPAL -->
+<section class="cs-section cs-section--light" id="principal">
+<div class="cs-wrap">
+<div class="cs-center" style="margin-bottom:2.5rem">
+<p class="cs-eyebrow">Leadership</p>
+<h2 class="cs-title">Principal’s Message</h2>
+</div>
+<blockquote class="cs-quote">
+<p class="cs-quote__salam">Assalamu Alaikum!</p>
+<p>Welcome to ConfoStudy.</p>
+<p>Our mission is to provide quality, affordable, and accessible education to students worldwide. Through experienced teachers, concept-based learning, and continuous support, we aim to help every student achieve academic excellence.</p>
+<p>We believe in creating a learning environment where knowledge, discipline, and innovation go hand in hand.</p>
+<p>Thank you for trusting us with your educational journey.</p>
+<p><strong>“Together, Let's Learn, Grow, and Succeed.”</strong></p>
+<footer class="cs-quote__sign">Principal, ConfoStudy<span>Concept Focus Study</span></footer>
+</blockquote>
+</div>
+</section>
+
+<!-- FAQs -->
+<section class="cs-section cs-section--dark" id="faqs">
+<div class="cs-wrap">
+<div class="cs-center">
+<p class="cs-eyebrow">Support</p>
+<h2 class="cs-title">Frequently Asked Questions</h2>
+<p class="cs-lead">Clear answers about admissions, classes, fees, and learning at ConfoStudy.</p>
+</div>
+<div class="cs-faq">
+<details>
+<summary>1. How can I take admission?</summary>
+<div class="cs-faq__a">You can apply online or contact us.</div>
+</details>
+<details>
+<summary>2. Which boards do you teach?</summary>
+<div class="cs-faq__a">We teach students from all major Pakistani boards, including Federal Board (FBISE), Sindh Board, Punjab Board, KPK Board, Aga Khan University Examination Board (AKU-EB), Cambridge O/A Levels, and Cambridge IGCSE.</div>
+</details>
+<details>
+<summary>3. Are classes live or recorded?</summary>
+<div class="cs-faq__a">Most classes are live, and recordings may be provided when available.</div>
+</details>
+<details>
+<summary>4. What documents are required?</summary>
+<div class="cs-faq__a">Father’s CNIC (Front &amp; Back), Previous Mark Sheet, and Student Photograph. Student B-Form is also requested if available.</div>
+</details>
+<details>
+<summary>5. Is there any discount?</summary>
+<div class="cs-faq__a">Yes, students receive a discount on one-time payment. For Class IX &amp; X, a Rs.2,000 discount is available (installments Rs.4,000 × 3). For Class XI &amp; XII, a Rs.3,000 discount is available (installments Rs.5,000 × 3).</div>
+</details>
+<details>
+<summary>6. How are exams conducted?</summary>
+<div class="cs-faq__a">Online weekly, monthly tests, mid-terms, and pre-board examinations are conducted according to the student’s board.</div>
+</details>
+<details>
+<summary>7. What are the passing marks?</summary>
+<div class="cs-faq__a">40% of the total marks.</div>
+</details>
+<details>
+<summary>8. Can students study from any city?</summary>
+<div class="cs-faq__a">Yes. Students from anywhere in the world can join our online classes.</div>
+</details>
+<details>
+<summary>9. Do you provide one-on-one support?</summary>
+<div class="cs-faq__a">Yes, students receive personalized academic guidance.</div>
+</details>
+<details>
+<summary>10. What are the class timings?</summary>
+<div class="cs-faq__a">Different morning and evening batches are available depending on the course.</div>
+</details>
+<details>
+<summary>11. What can we get from ConfoStudy?</summary>
+<div class="cs-faq__a">We will provide updated notes, MCQ's with solutions, PYQ's, doubt classes, and teacher support.</div>
+</details>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="cs-section cs-section--light" id="contact">
+<div class="cs-wrap">
+<div class="cs-center" style="margin-bottom:2.5rem">
+<p class="cs-eyebrow">Get in Touch</p>
+<h2 class="cs-title">Contact ConfoStudy</h2>
+<p class="cs-lead">We’re here to help with admissions, courses, and student support.</p>
+</div>
+<div class="cs-contact-grid">
+<div class="cs-contact-info">
+<div class="cs-contact-item">
+<div class="cs-contact-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+<div><h3>Address</h3><p>To be added.</p></div>
+</div>
+<div class="cs-contact-item">
+<div class="cs-contact-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+<div><h3>WhatsApp</h3><p><a href="https://wa.me/923209207839">0320-9207839</a><br><a href="https://wa.me/923719207839">0371-9207839</a></p></div>
+</div>
+<div class="cs-contact-item">
+<div class="cs-contact-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+<div><h3>Email Address</h3><p><a href="mailto:admissions@confostudy.com">admissions@confostudy.com</a></p></div>
+</div>
+<div class="cs-contact-item" style="width:100%">
+<div class="cs-contact-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5z"/><circle cx="12" cy="12" r="3.2"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg></div>
+<div>
+<h3>Social Media</h3>
+<div class="cs-social" aria-label="Social media" style="margin-top:.55rem">
+<a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&amp;utm_medium=copy_link&amp;utm_content=ci1au3z" target="_blank" rel="noopener noreferrer" aria-label="Follow ConfoStudy on Instagram">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+</a>
+<a href="https://www.facebook.com/share/19W1yDPYnV/" target="_blank" rel="noopener noreferrer" aria-label="Follow ConfoStudy on Facebook">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.174 2.097 15.943 2 14.643 2 11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+<form class="cs-contact-form" id="csContactForm" action="https://formsubmit.co/ajax/admissions@confostudy.com" method="POST" novalidate>
+<div class="cs-contact-form__head">
+<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+<div><h3>Send an Admission Enquiry</h3><p>Submit the form — your enquiry goes live to our admissions email.</p></div>
+</div>
+<input type="hidden" name="_subject" value="ConfoStudy Admission Enquiry">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+<div class="cs-form-grid">
+<div class="cs-field">
+<label for="csName">Student Name</label>
+<input id="csName" name="name" type="text" placeholder="Enter student name" required autocomplete="name">
+</div>
+<div class="cs-field">
+<label for="csEmail">Email Address</label>
+<input id="csEmail" name="email" type="email" placeholder="name@email.com" required autocomplete="email">
+</div>
+<div class="cs-field">
+<label for="csPhone">Phone / WhatsApp</label>
+<input id="csPhone" name="phone" type="tel" placeholder="+92 3XX XXXXXXX" required autocomplete="tel">
+</div>
+<div class="cs-field">
+<label for="csCourse">Select Course</label>
+<select id="csCourse" name="course" required>
+<option value="">Choose a course</option>
+<option>Primary Classes</option>
+<option>Matric IX–X</option>
+<option>Intermediate XI–XII</option>
+<option>F.Sc</option>
+<option>ICS</option>
+<option>I.Com / FA</option>
+<option>MDCAT Preparation</option>
+<option>ECAT Preparation</option>
+<option>Computer Courses</option>
+<option>English Language</option>
+<option>IELTS Preparation</option>
+</select>
+</div>
+<div class="cs-field">
+<label for="csBoard">Board</label>
+<select id="csBoard" name="board">
+<option value="">Select board</option>
+<option>Federal Board</option>
+<option>Sindh Board</option>
+<option>Punjab Board</option>
+<option>KPK Board</option>
+<option>AKU-EB</option>
+<option>Cambridge O/A Level</option>
+<option>Cambridge IGCSE</option>
+</select>
+</div>
+<div class="cs-field cs-field--full">
+<label for="csMessage">Message</label>
+<textarea id="csMessage" name="message" placeholder="Tell us which class or subjects you need help with"></textarea>
+</div>
+<div class="cs-field cs-field--full">
+<button class="cs-btn cs-btn--primary cs-form-submit" type="submit" id="csFormSubmit">Submit Enquiry</button>
+<p class="cs-form-status" id="csFormStatus" role="status" aria-live="polite"></p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="cs-footer">
+<div class="cs-wrap">
+<div class="cs-footer__grid">
+<div>
+<div class="cs-footer__brand">Confo<span>Study</span></div>
+<p>Learn Today. Lead Tomorrow.<br>Concept Focus Study — quality online education for students across the world.</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#admissions">Admissions</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>Explore</h4>
+<ul>
+<li><a href="#fees">Fee Structure</a></li>
+<li><a href="#why-us">Why Us</a></li>
+<li><a href="#faqs">FAQs</a></li>
+</ul>
+</div>
+</div>
+<div class="cs-footer__bottom">&copy; 2026 ConfoStudy. All rights reserved.</div>
+</div>
+</footer>
+
+<!-- Scroll progress bar -->
+<div class="cs-progress" id="csProgress" aria-hidden="true"></div>
+
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/923209207839?text=Assalamu%20Alaikum%2C%20I%20want%20to%20know%20about%20ConfoStudy%20admission." class="cs-fab cs-fab--wa" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<!-- Back to top button -->
+<button class="cs-fab cs-fab--top" id="csTopBtn" aria-label="Back to top" type="button">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var isTouch = window.matchMedia && (
+    window.matchMedia('(hover: none)').matches ||
+    window.matchMedia('(pointer: coarse)').matches ||
+    window.matchMedia('(max-width: 1023px)').matches
+  );
+
+  var targets = document.querySelectorAll('.cs-stagger, .cs-inview');
+  /* Mobile/Android: show everything immediately — no transform reveal (prevents scroll ghosting) */
+  if (reduce || isTouch || !('IntersectionObserver' in window)) {
+    for (var i = 0; i < targets.length; i++) targets[i].classList.add('is-visible');
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      for (var j = 0; j < entries.length; j++) {
+        if (entries[j].isIntersecting) {
+          entries[j].target.classList.add('is-visible');
+          io.unobserve(entries[j].target);
+        }
+      }
+    }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+    for (var k = 0; k < targets.length; k++) io.observe(targets[k]);
+  }
+
+  var topBtn = document.getElementById('csTopBtn');
+  var bar = document.getElementById('csProgress');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var st = window.pageYOffset || document.documentElement.scrollTop;
+      var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if (bar) bar.style.width = (h > 0 ? (st / h) * 100 : 0) + '%';
+      if (topBtn) topBtn.classList.toggle('is-shown', st > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  if (topBtn) topBtn.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: reduce || isTouch ? 'auto' : 'smooth' });
+  });
+
+  var menu = document.getElementById('cs-menu');
+  var drawerLinks = document.querySelectorAll('.cs-nav__drawer a');
+  for (var d = 0; d < drawerLinks.length; d++) {
+    drawerLinks[d].addEventListener('click', function(){ if (menu) menu.checked = false; });
+  }
+
+  /* FAQ accordion — one open at a time */
+  var faqItems = document.querySelectorAll('.cs-faq details');
+  for (var fi = 0; fi < faqItems.length; fi++) {
+    faqItems[fi].addEventListener('toggle', function(){
+      if (!this.open) return;
+      for (var fj = 0; fj < faqItems.length; fj++) {
+        if (faqItems[fj] !== this && faqItems[fj].open) faqItems[fj].removeAttribute('open');
+      }
+    });
+  }
+
+  /* Faculty carousel */
+  (function initTeamSlider(){
+    var root = document.querySelector('[data-team-slider]');
+    if (!root) return;
+    var track = root.querySelector('[data-team-track]');
+    var prev = root.querySelector('[data-team-prev]');
+    var next = root.querySelector('[data-team-next]');
+    var dotsWrap = root.querySelector('[data-team-dots]');
+    var cards = track ? track.querySelectorAll('.cs-team-card') : [];
+    if (!track || !cards.length) return;
+
+    var dots = [];
+    for (var i = 0; i < cards.length; i++) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'cs-team-dot' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label', 'Go to teacher ' + (i + 1));
+      (function(idx){
+        dot.addEventListener('click', function(){ scrollToIndex(idx); });
+      })(i);
+      dotsWrap.appendChild(dot);
+      dots.push(dot);
+    }
+
+    function cardStep(){
+      var first = cards[0];
+      var gap = parseFloat(window.getComputedStyle(track).gap) || 20;
+      return first ? first.getBoundingClientRect().width + gap : track.clientWidth * 0.85;
+    }
+    function nearestIndex(){
+      var left = track.scrollLeft;
+      var step = cardStep();
+      return Math.max(0, Math.min(cards.length - 1, Math.round(left / step)));
+    }
+    function scrollToIndex(idx){
+      var step = cardStep();
+      track.scrollTo({ left: step * idx, behavior: reduce ? 'auto' : 'smooth' });
+      setActive(idx);
+    }
+    function setActive(idx){
+      for (var d = 0; d < dots.length; d++) {
+        dots[d].classList.toggle('is-active', d === idx);
+      }
+    }
+    function nudge(dir){
+      scrollToIndex(Math.max(0, Math.min(cards.length - 1, nearestIndex() + dir)));
+    }
+    if (prev) prev.addEventListener('click', function(){ nudge(-1); });
+    if (next) next.addEventListener('click', function(){ nudge(1); });
+
+    var scrollTimer;
+    track.addEventListener('scroll', function(){
+      window.clearTimeout(scrollTimer);
+      scrollTimer = window.setTimeout(function(){ setActive(nearestIndex()); }, 60);
+    }, { passive: true });
+
+    track.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowRight') { e.preventDefault(); nudge(1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); nudge(-1); }
+    });
+
+    if (!reduce) {
+      var autoTimer = window.setInterval(function(){
+        if (document.hidden) return;
+        var idx = nearestIndex();
+        scrollToIndex(idx >= cards.length - 1 ? 0 : idx + 1);
+      }, 4500);
+      root.addEventListener('pointerenter', function(){ window.clearInterval(autoTimer); });
+      root.addEventListener('pointerleave', function(){
+        window.clearInterval(autoTimer);
+        autoTimer = window.setInterval(function(){
+          if (document.hidden) return;
+          var idx = nearestIndex();
+          scrollToIndex(idx >= cards.length - 1 ? 0 : idx + 1);
+        }, 4500);
+      });
+    }
+  })();
+
+  /* Live enquiry → email (FormSubmit). Change CS_ENQUIRY_EMAIL to your real inbox. */
+  var CS_ENQUIRY_EMAIL = 'admissions@confostudy.com';
+  var contactForm = document.getElementById('csContactForm');
+  var formStatus = document.getElementById('csFormStatus');
+  var formSubmit = document.getElementById('csFormSubmit');
+  if (contactForm) {
+    contactForm.setAttribute('action', 'https://formsubmit.co/ajax/' + CS_ENQUIRY_EMAIL);
+    contactForm.addEventListener('submit', function(event){
+      event.preventDefault();
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+      var data = new FormData(contactForm);
+      data.set('_replyto', data.get('email') || '');
+      if (formStatus) {
+        formStatus.className = 'cs-form-status is-visible';
+        formStatus.textContent = 'Sending your enquiry…';
+      }
+      if (formSubmit) formSubmit.disabled = true;
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' }
+      }).then(function(res){
+        if (!res.ok) throw new Error('send_failed');
+        return res.json().catch(function(){ return {}; });
+      }).then(function(){
+        if (formStatus) {
+          formStatus.className = 'cs-form-status is-visible is-ok';
+          formStatus.textContent = 'Thank you! Your enquiry has been emailed to ConfoStudy. We will contact you soon.';
+        }
+        contactForm.reset();
+      }).catch(function(){
+        if (formStatus) {
+          formStatus.className = 'cs-form-status is-visible is-err';
+          formStatus.textContent = 'Could not send right now. Please email ' + CS_ENQUIRY_EMAIL + ' or try again.';
+        }
+      }).finally(function(){
+        if (formSubmit) formSubmit.disabled = false;
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

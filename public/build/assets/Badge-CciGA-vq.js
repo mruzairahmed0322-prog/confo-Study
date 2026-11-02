@@ -1,0 +1,1 @@
+import{j as n}from"./vendor-BJPuhCrC.js";import{c as a,s as i}from"./app-BECsqx7D.js";function m({children:e,variant:s="pending",className:t}){return n.jsx("span",{className:a("inline-flex items-center rounded-lg px-2.5 py-0.5 text-xs font-semibold capitalize",i[s]??"admin-badge-muted",t),children:e})}export{m as B};

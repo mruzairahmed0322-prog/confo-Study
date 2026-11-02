@@ -1,0 +1,35 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "dev:full": "concurrently -c \"#93c5fd,#86efac\" \"php artisan serve --host=0.0.0.0\" \"npm run dev\" --names=server,vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@tanstack/react-query": "^5.101.4",
+        "@tanstack/react-virtual": "^3.14.9",
+        "@types/qrcode": "^1.5.6",
+        "axios": "^1.19.0",
+        "clsx": "^2.1.1",
+        "lucide-react": "^1.28.0",
+        "qrcode": "^1.5.4",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^7.18.2",
+        "recharts": "^3.10.1"
+    },
+    "devDependencies": {
+        "@types/react": "^18.3.18",
+        "@types/react-dom": "^18.3.5",
+        "@vitejs/plugin-react": "^4.3.4",
+        "autoprefixer": "^10.4.20",
+        "concurrently": "^9.1.2",
+        "laravel-vite-plugin": "^1.2.0",
+        "postcss": "^8.4.49",
+        "tailwindcss": "^3.4.17",
+        "typescript": "^5.7.3",
+        "vite": "^6.0.7"
+    }
+}
